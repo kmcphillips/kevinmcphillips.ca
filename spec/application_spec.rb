@@ -12,11 +12,5 @@ describe 'main application' do
     last_response.should be_ok
   end
 
-  describe "something" do
-    it "shoud be ok" do
-      true.should == true
-    end
-  end
-
 end
 
