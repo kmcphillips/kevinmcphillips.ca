@@ -13,10 +13,9 @@ error do
 end
 
 helpers do
-  # add your helpers here
+  
 end
 
-# root page
 get '/' do
-  haml :root
+  haml :index
 end
