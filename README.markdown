@@ -1,3 +1,5 @@
+# kevinmcphillips.ca
+
 ## What?
 
 This is my professional home page. Nothing fancy, but it has all the important stuff.
@@ -7,14 +9,14 @@ This is my professional home page. Nothing fancy, but it has all the important s
 
 ## Who?
 
-I am a professional developer, working mostly in Ruby, Rails, JavaScript and misc. web development. If you're still curious, you should probably just visit the URL plastered all over this page.
+I am a professional developer, working mostly in Ruby, Rails, JavaScript and misc. web development.
+
+If you're still curious, you should probably just visit the URL plastered all over this page.
 
 
 ## Contact
 
-I'm easy to get in touch with.
-
-[github@kevinmcphillips.ca](mailto:github@kevinmcphillips.ca)
+I'm easy to get in touch with. [github@kevinmcphillips.ca](mailto:github@kevinmcphillips.ca)
 
 
 ## History
