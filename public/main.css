@@ -16,20 +16,25 @@ body {
   left: 0;
   width: 42%;
   height: 100%;
-  
-  background-color: #444;
+  background: #3767AD url('images/bgstripe.png') ;
 }
 
 #logo {
   margin-top: 35%;
   text-align: right;
-  background-color: yellow;
+}
+
+#logo a {
+  color: #000;
+	font-size: 4em;
+}
+
+#logo a:hover {
+  text-decoration: none;
 }
 
 #nav {
-  text-align: right;
-  background-color: green;
-  
+  text-align: right;  
 }
 
 #right {
@@ -62,9 +67,5 @@ a {
 
 a:hover {
   text-decoration: underline;
-}
-
-#logo a:hover {
-  text-decoration: none;
 }
 
