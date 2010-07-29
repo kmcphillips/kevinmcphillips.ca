@@ -4,11 +4,20 @@
     %title= @title || SiteConfig.title
     %link{:href => '/main.css', :rel => 'stylesheet', :type => 'text/css'}
   %body
-    #container
-      #header
-        #logo
-          %h1
-            %a{:href => '/'}= SiteConfig.title
+    #left    
+      #logo
+        Kevin
+        %br
+        McPhillips
+        
+      #nav
+        #ul
+          #li Bio
+          #li Resume
+          #li Projects
+          #li Code
+          #li Ceramics
+      
+    #right
       #content= yield
-      #footer
-        %p#legal= "#{SiteConfig.author} &copy; #{Time.now.strftime('%Y')}"
+
