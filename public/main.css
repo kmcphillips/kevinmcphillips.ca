@@ -1,3 +1,10 @@
+/*********
+http://kevinmcphillips.ca
+Written, unsurprisingly, by the same.
+*********/
+
+/* Layout */
+
 body {
   font-family: Helvetica, Verdana, Arial, sans-serif;
   margin: 0;
@@ -19,40 +26,36 @@ body {
   background: #3767AD url('images/bgstripe.png') ;
 }
 
+#right {
+  margin: 100px 10px;
+}
+
+/* Header logo */
+
 #logo {
-  margin-top: 35%;
+  margin: 35% 16px 0 0;
   text-align: right;
 }
 
 #logo a {
-  color: #000;
-	font-size: 4em;
+  color: #DDD;
+  font-size: 4em;
+  font-variant: small-caps !important;
+  letter-spacing:-2px;
+	font-weight: normal;
 }
 
 #logo a:hover {
   text-decoration: none;
 }
 
+/* Navbar */
+
 #nav {
   text-align: right;  
 }
 
-#right {
-  margin: 100px 10px;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  margin-top: 0em;
-  margin-bottom: .25em;
-  font-weight: bold;
-}
-
-h1 { font-size: 2.2em; }
-h2 { font-size: 1.6em; }
-h3 { font-size: 1.4em; }
-h4 { font-size: 1.3em; }
-h5 { font-size: 1.2em; }
-h6 { font-size: 1.1em; }
+/* Styles */
 
 p {
   margin-bottom: 1em;
