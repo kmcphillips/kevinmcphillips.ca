@@ -1,5 +1,6 @@
 require 'rubygems'
 require 'haml'
+require 'sass'
 require 'sinatra' unless defined?(Sinatra)
 
 configure do

@@ -6,7 +6,7 @@ require 'environment'
 configure do
   set :views, "#{File.dirname(__FILE__)}/views"
   
-  PAGES = [:bio, :resume, :projects, :code, :ceramics]
+  PAGES = [:bio, :resume, :projects, :code]
 end
 
 error do
