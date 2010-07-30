@@ -5,12 +5,13 @@
     %link{:href => '/stylesheet.css', :rel => 'stylesheet', :type => 'text/css'}
   %body
     #left    
-      #logo= link_to "/", "Kevin<br>McPhillips"
+      .bg-shaddow
+        #logo= link_to "/", "Kevin<br>McPhillips"
         
-      #nav
-        #ul
-          - PAGES.each do |page|
-            #li= link_to "/#{page}", page.to_s.capitalize
+        #nav
+          #ul
+            - PAGES.each do |page|
+              #li= link_to "/#{page}", page.to_s.capitalize
       
     #right
       #content= yield
