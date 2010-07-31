@@ -1,0 +1,4 @@
+%h2 Projects
+
+- Project.all.each_with_index do |project, i|
+  .project_#{i % 2 == 0 ? "left" : "right"}= render :partial => 'project', :object => project
