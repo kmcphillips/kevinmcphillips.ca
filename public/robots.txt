@@ -1,0 +1,5 @@
+User-Agent: *
+Disallow: /404
+Disallow: /villains
+Disallow: /evil/doers
+Disallow: /zombies
