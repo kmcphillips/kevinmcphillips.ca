@@ -13,11 +13,18 @@ configure do
   class Project; def self.all; [] ; end ; end
 end
 
+## Error documents
+
+not_found do
+  haml :'404'
+end
+
 error do
   e = request.env['sinatra.error']
   Kernel.puts e.backtrace.join("\n")
   'Application error'
 end
+
 
 helpers do
   def link_to(url, name=nil, options={})
