@@ -7,6 +7,7 @@ configure do
   set :views, "#{File.dirname(__FILE__)}/views"
   
   PAGES = [:bio, :resume, :projects, :code]
+  EMAIL = "admin@kevinmcphillips.ca"
 end
 
 error do
@@ -21,6 +22,11 @@ helpers do
     options["href"] = url
 
     "<a #{options.keys.map{|k| "#{k}=\"#{options[k]}\""}.join(" ")}>#{name || url}</a>"
+  end
+  
+  def rot13js(url, name=nil, options={})
+    # TODO
+    link_to(url, name, options)
   end
 end
 
