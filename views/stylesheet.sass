@@ -7,6 +7,13 @@
 
 $left_size: 42%
 
+//$dark: #152729
+$dark: #14494F
+$light: #F0F0D8
+$pale: #99CDD1
+$acc_dark: #0F5459
+$acc_light: #39898E
+
 // Layout
 
 body
@@ -14,6 +21,8 @@ body
     family: Helvetica, Verdana, Arial, sans-serif
   margin: 0
   padding: 0 0 0 $left_size
+  background-color: $light
+  color: $dark
 
 #container
   margin: 0 auto
@@ -43,13 +52,14 @@ body
 #logo
   margin: 35% 16px 0 0
   text-align: right
-  
+  text-shadow: 6px 6px 13px #000
+    
   a
     color: #DDD
-    font-size: 4em
+    font-size: 4.4em
     font-variant: small-caps !important
     letter-spacing: -2px
-    font-weight: normal
+    font-weight: normal    
   a:hover
     text-decoration: none
 
@@ -65,12 +75,15 @@ body
 // Resume
 
 #resume
-  border: 1px solid #000
+  border: 2px solid #000
   background-color: #FFF
   margin: 18px
   padding: 12px
   font-size: 0.9em
   color: #000
+  -moz-box-shadow: 6px 6px 14px #666
+  -webkit-box-shadow: 6px 6px 14px #666
+  box-shadow: 6px 6px 14px #666
   
   h3, h4, h5
     margin: 0px
@@ -93,10 +106,11 @@ p
   line-height: 1.3
 
 a
-  color: #095EAE
-  font-weight: bold
+  color: $acc_light
   text-decoration: none
 
 a:hover
   text-decoration: underline
+  color: $acc_dark
+  
 
