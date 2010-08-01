@@ -13,8 +13,9 @@
         
         #nav
           %ul
-            - PAGES.each do |page|
-              %li= link_to "/#{page}", page.to_s.capitalize
+            - PAGES.each_with_index do |page, i|
+              %li= link_to "/#{page}", page.to_s.capitalize, :class => first_last_class_by_index(i, PAGES)
+        .clear
       
     #right
       #content= yield

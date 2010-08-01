@@ -6,6 +6,7 @@
 // variables
 
 $left_size: 42%
+$nav_border_radius: 12px
 
 // colours
 $dark: #14494F
@@ -14,6 +15,7 @@ $pale: #99CDD1
 $acc_dark: #0F5459
 $acc_light: #39898E
 $almost_white: #DDD
+$almoster_white: #EEE
 
 $white: #FFF
 $black: #000
@@ -71,18 +73,26 @@ body
 
 #nav
   text-align: right
-  margin: 10px 0 0 0
+  margin: 0 36px 0 0
   
   ul
     list-style: none
     text-align: right
     direction: rtl
     padding: 0px
+    margin: 20px 0px
+    -moz-box-shadow: 4px 4px 18px $black
+    -webkit-box-shadow: 4px 4px 18px $black
+    box-shadow: 4px 4px 18px $black
+    -moz-border-radius: $nav_border_radius
+    -webkit-border-radius: $nav_border_radius
+    float: right
 
     li
       width: 100px
       padding: 0
-      text-align: right
+      text-align: center
+      font-weight: bold
       
       a
         background-color: $dark
@@ -91,8 +101,22 @@ body
         color: $almost_white
         display: block
         
+      a.first
+        -moz-border-radius-topleft: $nav_border_radius
+        -moz-border-radius-topright: $nav_border_radius
+        -webkit-border-top-left-radius: $nav_border_radius
+        -webkit-border-top-right-radius: $nav_border_radius
+        
+      a.last
+        -moz-border-radius-bottomleft: $nav_border_radius
+        -moz-border-radius-bottomright: $nav_border_radius
+        -webkit-border-bottom-left-radius: $nav_border_radius
+        -webkit-border-bottom-right-radius: $nav_border_radius
+        
       a:hover
+        text-decoration: none
         background-color: $acc_dark
+        color: $almoster_white
     
 // Resume
 
@@ -134,5 +158,8 @@ a
 a:hover
   text-decoration: underline
   color: $acc_dark
+  
+.clear
+  clear: booth
   
 
