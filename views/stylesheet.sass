@@ -7,12 +7,16 @@
 
 $left_size: 42%
 
-//$dark: #152729
+// colours
 $dark: #14494F
 $light: #F0F0D8
 $pale: #99CDD1
 $acc_dark: #0F5459
 $acc_light: #39898E
+$almost_white: #DDD
+
+$white: #FFF
+$black: #000
 
 // Layout
 
@@ -34,7 +38,7 @@ body
   left: 0
   width: $left_size
   height: 100%
-  background: #3767AD url('images/bgstripe.png') 
+  background: $acc_dark url('images/bgstripe.png') 
   
   .bg-shadow
     position: absolute
@@ -52,10 +56,10 @@ body
 #logo
   margin: 35% 16px 0 0
   text-align: right
-  text-shadow: 6px 6px 13px #000
+  text-shadow: 6px 6px 13px $black
     
   a
-    color: #DDD
+    color: $almost_white
     font-size: 4.4em
     font-variant: small-caps !important
     letter-spacing: -2px
@@ -67,23 +71,41 @@ body
 
 #nav
   text-align: right
-  margin: 10px 16px 0 0
+  margin: 10px 0 0 0
   
-  a
-    color: #DDD
+  ul
+    list-style: none
+    text-align: right
+    direction: rtl
+    padding: 0px
+
+    li
+      width: 100px
+      padding: 0
+      text-align: right
+      
+      a
+        background-color: $dark
+        margin: 0px
+        padding: 8px
+        color: $almost_white
+        display: block
+        
+      a:hover
+        background-color: $acc_dark
     
 // Resume
 
 #resume
-  border: 2px solid #000
-  background-color: #FFF
+  border: 2px solid $black
+  background-color: $white
   margin: 18px
   padding: 12px
   font-size: 0.9em
-  color: #000
-  -moz-box-shadow: 6px 6px 14px #666
-  -webkit-box-shadow: 6px 6px 14px #666
-  box-shadow: 6px 6px 14px #666
+  color: $black
+  -moz-box-shadow: 4px 4px 14px $black
+  -webkit-box-shadow: 4px 4px 14px $black
+  box-shadow: 4px 4px 14px $black
   
   h3, h4, h5
     margin: 0px
