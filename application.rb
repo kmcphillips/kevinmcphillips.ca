@@ -39,14 +39,6 @@ helpers do
     obfuscated.insert((email.length / 3) * 2, "[REMOVETHIS]").insert(email.length / 3, "[REMOVETHIS]")
     "<script>document.write('<a href=\"mailto:' + '#{email.rot13}'.rot13() + '\">#{name || "' + '#{email.rot13}'.rot13() + '"}</a>');</script><noscript><a href=\"mailto:#{obfuscated}\">#{name || obfuscated}</a></noscript>"
   end
-  
-  def first_last_class_by_index(index, collection, prefix=nil)
-    if index == 0
-      [prefix, "first"].compact.join("_")
-    elsif index == (collection.length - 1)
-      [prefix, "last"].compact.join("_")
-    end
-  end
 end
 
 ## Routes

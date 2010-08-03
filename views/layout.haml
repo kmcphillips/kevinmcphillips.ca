@@ -8,12 +8,13 @@
     
   %body
     #wrapper
-      #header= link_to "/", "Kevin McPhillips"
+      #header
+        %h1= link_to "/", "<span class=\"accent\">K</span>evin <span class=\"accent\">M</span>cPhillips"
       #sidebar
         #nav
           %ul
             - PAGES.each do |page|
-              %li= link_to "/#{page}", page.to_s.capitalize
+              %li= link_to "/#{page}", "# #{page.to_s.capitalize}"
           
         #nav-graphic
           -# TODO

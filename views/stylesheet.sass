@@ -9,6 +9,8 @@
 // colours
 $white: #FFF
 $black: #000
+$accent: #145595
+$accent_dark: #385455
 
 // Layout
 
@@ -25,6 +27,14 @@ body
   margin: 20px 0px 0px 20px
   max-width: 1150px
   min-width: 1150px
+  
+  a
+    text-decoration: none
+    color: $accent_dark
+
+  a:hover
+    text-decoration: underline
+    color: $accent_dark
 
 #header
   a
@@ -33,30 +43,39 @@ body
   a:hover
     color: $black
     text-decoration: none
+  
+  h1
+    
+    .accent
+      color: $accent
 
 
 #sidebar
   #nav
-    background-color: $black
     color: $white
     font-size: 2em
-    margin: 20px
+    margin: 0
+    padding: 0
     
     ul
+      background-color: $black
       list-style: none
-      padding: 0px
-      margin: 0px
+      margin: 24px 0
+      padding: 18px
 
       li
-        padding: 0
+        padding: 2px
+        display: block
       
         a
           background-color: $black
           color: $white
-  
+          padding: 2px
+          margin: 2px
+            
         a:hover
           text-decoration: none
-          background-color: $white
+          background-color: $accent
           color: $black
 
 
@@ -66,11 +85,6 @@ body
 
 // Styles
 
-a
-  text-decoration: none
-
-a:hover
-  text-decoration: underline
   
 .clear
   clear: booth
