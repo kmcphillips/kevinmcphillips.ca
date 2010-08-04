@@ -8,8 +8,6 @@
     
   %body
     #wrapper
-      #header
-        %h1= link_to "/", "<span class=\"accent\">K</span>evin <span class=\"accent\">M</span>cPhillips"
       #sidebar
         #nav
           %ul
@@ -18,5 +16,10 @@
           
         #nav-graphic
           -# TODO
+
+      #header
+        %h1= link_to "/", "<span class=\"accent\">K</span>evin <span class=\"accent\">M</span>cPhillips"
       
       #content= yield
+
+      #footer
