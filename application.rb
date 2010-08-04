@@ -4,13 +4,9 @@ require 'sinatra'
 require 'environment'
 
 configure do
-  set :views, "#{File.dirname(__FILE__)}/views"
-  
   PAGES = [:bio, :resume, :projects, :code]
   EMAIL = "admin@kevinmcphillips.ca"
-  
-  # TODO
-  class Project; def self.all; [] ; end ; end
+  TITLE = "kevinmcphillips.ca"
 end
 
 ## Error documents
