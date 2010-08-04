@@ -23,3 +23,6 @@ I'm easy to get in touch with. [github@kevinmcphillips.ca](mailto:github@kevinmc
 
 July 29/2010 -- Initial repo creation.
 
+August 3/2010 -- Added branch 'design2' and overhaul CSS/layout.
+
+
