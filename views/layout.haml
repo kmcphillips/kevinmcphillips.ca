@@ -23,3 +23,9 @@
       #content= yield
 
       #footer
+        %p
+          = rot13email(EMAIL, "Contact")
+          = " :: "
+          &copy;
+          = Time.now.year
+
