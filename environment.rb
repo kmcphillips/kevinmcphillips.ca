@@ -20,11 +20,14 @@ configure do
   Dir.glob("#{File.dirname(__FILE__)}/lib/*.rb") { |lib| require File.basename(lib, '.*') }
   
   # setup database
-  DataMapper.setup(:default, (ENV["DATABASE_URL"] || "sqlite3:///#{File.expand_path(File.dirname(__FILE__))}/kevinmcphillips.ca.#{Sinatra::Base.environment}.db"))
+  DataMapper.setup(:default, 'sqlite::memory:')
   
   # get the DB all ready to go
   DataMapper.finalize
   DataMapper.auto_upgrade!
+  
+  # seed the database
+  Seed.process!
 end
 
 

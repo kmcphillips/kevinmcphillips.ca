@@ -30,6 +30,20 @@ helpers do
     "<a #{options.keys.map{|k| "#{k}=\"#{options[k]}\""}.join(" ")}>#{name || url}</a>"
   end
   
+  def render(*args)
+    if args.first.is_a?(Hash) && args.first.keys.include?(:partial)
+      options = args.first
+      partial = options.delete(:partial)
+      if object = options.delete(:object)
+        options[:locals] = (options[:locals] || {}).merge(partial.to_sym => object)
+      end
+      
+      return haml "_#{partial}".to_sym, options.merge(:layout => false)
+    else
+      super
+    end
+  end
+  
   def rot13email(email, name=nil)
     obfuscated = email.clone
     obfuscated.insert((email.length / 3) * 2, "[REMOVETHIS]").insert(email.length / 3, "[REMOVETHIS]")
@@ -50,6 +64,7 @@ end
 
 PAGES.each do |page|
   get "/#{page}" do
+    @projects = Project.all if page == :projects    
     haml page
   end
 end

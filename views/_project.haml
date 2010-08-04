@@ -1,4 +1,5 @@
-%h3.title= project.title
-%h4.url= project.url
+%h3.name= project.name
+%h4.url= link_to(project.url)
+%h5.url= link_to(project.source_url, "Source Code") if project.source_url
 .thumbnail= link_to project.url, "IMG"
 .description= project.description

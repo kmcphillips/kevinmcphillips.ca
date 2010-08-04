@@ -5,6 +5,7 @@ class Project
   property :name, String
   property :description, Text
   property :url, String
+  property :source_url, String
   property :created_at, DateTime
   property :updated_at, DateTime
 
