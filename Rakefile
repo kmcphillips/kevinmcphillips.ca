@@ -27,6 +27,12 @@ end
 namespace :db do
   desc 'Seed the database'
   task :seed => :environment do
-    Seed.process!
+    DataManager.seed!
+  end
+  
+  desc 'Migrate (WARNING: destructive)'
+  task :migrate => :environment do
+    DataManager.migrate!
   end
 end
+
