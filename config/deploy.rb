@@ -38,6 +38,11 @@ task :after_update_code do
   end
 end
 
+## restart the app
+task :restart do
+  run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
+end
+
 ## seed the database
 task :seed do
   run("cd #{current_path} && /usr/bin/env rake db:seed")
