@@ -38,5 +38,5 @@ task :after_update_code do
     run "ln -s #{shared_path}/#{file} #{release_path}/#{file}"
   end
   
-  run("cd #{deploy_to}/current && /usr/bin/env rake `db:seed`")
+  run("cd #{deploy_to}/current && /usr/bin/env rake db:seed")
 end
