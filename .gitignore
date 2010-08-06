@@ -5,3 +5,4 @@ log/*.log
 .project
 .settings
 *.db
+tmp/*

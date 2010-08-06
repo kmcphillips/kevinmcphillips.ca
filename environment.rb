@@ -1,14 +1,12 @@
 require 'rubygems'
 require 'sinatra' unless defined?(Sinatra)
 
-## gem install sinatra haml data_objects do_sqlite3 dm-core dm-validations dm-timestamps dm-aggregates dm-migrations dm-sqlite-adapter
 require 'haml'
 require 'sass'
-require 'rubygems'
+require 'sinatra/content_for'
 require 'dm-core'
 require 'dm-sqlite-adapter'
 require 'dm-validations'
-require 'dm-timestamps'
 require 'dm-aggregates'
 require 'dm-migrations'
 
@@ -24,9 +22,8 @@ configure do
   
   DataMapper.setup(:default, "sqlite3:///#{File.expand_path(File.dirname(__FILE__))}/kevinmcphillips.ca.db")
   
-  # get the DB all ready to go
+  # this doesn't seem to be necessary
   #DataMapper.finalize
-  #DataMapper.auto_migrate!
 end
 
 
