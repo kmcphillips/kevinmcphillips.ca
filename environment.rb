@@ -22,14 +22,14 @@ configure do
   # setup database
   DataMapper::Logger.new($stdout, :debug)
   
-  DataMapper.setup(:default, 'sqlite::memory:')
+  DataMapper.setup(:default, "sqlite3:///#{File.expand_path(File.dirname(__FILE__))}/kevinmcphillips.ca.db")
   
   # get the DB all ready to go
   DataMapper.finalize
   DataMapper.auto_migrate!
   
   # seed the database
-  Seed.process!
+#  Seed.process!
 end
 
 

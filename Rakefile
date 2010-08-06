@@ -15,7 +15,7 @@ end
 namespace :gems do
   desc 'Install required gems'
   task :install do
-    required_gems = %w{ sinatra rspec rack-test data_mapper dm-sqlite-adapter haml }
+    required_gems = %w{ sinatra rspec rack-tes dm-sqlite-adapter haml data_objects do_sqlite3 dm-core dm-validations dm-timestamps dm-aggregates dm-migrations }
     required_gems.each { |required_gem| system "sudo gem install #{required_gem}" }
   end
 end
@@ -24,3 +24,9 @@ task :environment do
   require 'environment'
 end
 
+namespace :db do
+  desc 'Seed the database'
+  task :seed => :environment do
+    Seed.process!
+  end
+end

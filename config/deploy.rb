@@ -28,10 +28,15 @@ namespace :deploy do
   end
 end
 
-## Symlink the production database config file
-#task :after_update_code do
-#  %w{database.yml config.yml}.each do |config|
-#    run "ln -s #{shared_path}/#{config} #{release_path}/config/#{config}"
-#  end
-#end
-
+## Symlink the production database and seed
+task :after_update_code do
+  db_file = "kevinmcphillips.ca.db"
+  
+  run "touch #{shared_path}/#{db_file}"
+  
+  [db_file].each do |file|
+    run "ln -s #{shared_path}/#{file} #{release_path}/#{file}"
+  end
+  
+  run("cd #{deploy_to}/current && /usr/bin/env rake `db:seed`")
+end
