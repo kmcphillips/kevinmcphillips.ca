@@ -24,7 +24,7 @@ configure do
   
   # get the DB all ready to go
   DataMapper.finalize
-  DataMapper.auto_upgrade!
+  DataMapper.auto_migrate!
   
   # seed the database
   Seed.process!

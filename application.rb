@@ -6,7 +6,7 @@ require 'environment'
 configure do
   PAGES = [:bio, :resume, :projects, :code]
   EMAIL = "admin@kevinmcphillips.ca"
-  TITLE = "kevinmcphillips.ca"
+  TITLE = "Kevin McPhillips"
 end
 
 ## Error documents
@@ -59,6 +59,7 @@ get '/stylesheet.css' do
 end
 
 get '/' do
+  @skip_footer = true
   haml :index
 end
 
