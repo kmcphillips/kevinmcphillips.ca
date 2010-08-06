@@ -20,6 +20,8 @@ configure do
   Dir.glob("#{File.dirname(__FILE__)}/lib/*.rb") { |lib| require File.basename(lib, '.*') }
   
   # setup database
+  DataMapper::Logger.new($stdout, :debug)
+  
   DataMapper.setup(:default, 'sqlite::memory:')
   
   # get the DB all ready to go
