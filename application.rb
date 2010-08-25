@@ -73,6 +73,7 @@ end
 PAGES.each do |page|
   get "/#{page}" do
     @projects = Project.all if page == :projects    
+    @title = page.to_s.humanize
     haml page
   end
 end

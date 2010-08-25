@@ -53,4 +53,13 @@ class String
       end
     end
   end
+  
+  def titleize
+    gsub("_", " ").split(" ").map{|x| x.capitalize}.join(" ")
+  end
+  
+  def humanize
+    gsub("_", " ").capitalize
+  end
 end
+
