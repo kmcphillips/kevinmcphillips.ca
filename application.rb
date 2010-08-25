@@ -23,11 +23,18 @@ end
 
 
 helpers do
-  def link_to(url, name=nil, options={})
+  def link_to(name, url=nil, options={})
     options = options.stringify_keys
-    options["href"] = url
+    options["href"] = url || name
 
-    "<a #{options.keys.map{|k| "#{k}=\"#{options[k]}\""}.join(" ")}>#{name || url}</a>"
+    "<a #{options.keys.map{|k| "#{k}=\"#{options[k]}\""}.join(" ")}>#{name}</a>"
+  end
+  
+  def image_tag(url, options={})
+    options = options.stringify_keys
+    options["src"] = url
+  
+    "<img #{options.keys.map{|k| "#{k}=\"#{options[k]}\""}.join(" ")} />"
   end
   
   def render(*args)
@@ -69,3 +76,4 @@ PAGES.each do |page|
     haml page
   end
 end
+

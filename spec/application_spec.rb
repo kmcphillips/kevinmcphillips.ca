@@ -1,6 +1,6 @@
 require "#{File.dirname(__FILE__)}/spec_helper"
 
-describe 'main application' do
+describe 'Application' do
   include Rack::Test::Methods
 
   def app
@@ -11,6 +11,10 @@ describe 'main application' do
     it 'should show the default index page' do
       get '/'
       last_response.should be_ok
+    end
+    
+    it "should test the css/sass" do
+      pending
     end
     
     PAGES.each do |page|
@@ -40,6 +44,24 @@ describe 'main application' do
         @hash.should == @hash_stringified
         @hash[:pie].should be_nil
       end
+    end
+  end
+  
+  describe "helpers" do
+    it "should test link_to" do
+      pending
+    end
+  
+    it "should test image_tag" do
+      pending
+    end
+    
+    it "should test render" do
+      pending
+    end
+    
+    it "should test rot13email" do
+      pending
     end
   end
 end
