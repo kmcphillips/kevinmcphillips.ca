@@ -14,7 +14,10 @@ describe 'Application' do
     end
     
     it "should test the css/sass" do
-      pending
+      pending "I don't know how to stub this yet"
+      should_receive(:content_type).with('text/css', :charset => 'utf-8')
+      should_receive(:sass).with(:stylesheet)
+      get '/stylesheet.css'
     end
     
     PAGES.each do |page|
@@ -72,24 +75,6 @@ describe 'Application' do
       it "should get rid of underscores" do
         "under_score".titleize.should == "Under Score"
       end
-    end
-  end
-  
-  describe "helpers" do
-    it "should test link_to" do
-      pending
-    end
-  
-    it "should test image_tag" do
-      pending
-    end
-    
-    it "should test render" do
-      pending
-    end
-    
-    it "should test rot13email" do
-      pending
     end
   end
 end
