@@ -29,7 +29,9 @@ namespace :deploy do
 end
 
 ## Symlink the production database and seed
-task :after_update_code do
+after "deploy", "symlink_shared_files"
+
+task :symlink_shared_files do
   db_file = "kevinmcphillips.ca.db"
   run "touch #{shared_path}/#{db_file}"
   
