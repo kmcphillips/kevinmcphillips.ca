@@ -18,6 +18,7 @@ DataMapper::Logger.new("/dev/null", :off)
 
 Spec::Runner.configure do |config|
   config.before(:each) { DataMapper.auto_migrate! }
+  config.include Rack::Test::Methods
   config.include Helpers
 end
 
