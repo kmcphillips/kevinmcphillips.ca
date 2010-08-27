@@ -1,5 +1,10 @@
 %h3.name= project.name
 %h4.url= link_to(project.url)
-%h5.url= link_to("Source Code", project.source_url) if project.source_url
-.thumbnail= link_to(image_tag(project.image_path, :alt => project.name), project.url) if project.image_path
-.description= project.description
+.clear.spacer
+
+= link_to(image_tag("http://placehold.it/160x160.png", :alt => project.name), project.url) if project.image_path  # project.image_path
+.description
+  %p= project.description
+  %h5.url= link_to("GOTO source code", project.source_url) if project.source_url
+
+.clear

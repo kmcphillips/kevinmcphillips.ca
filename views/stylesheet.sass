@@ -9,6 +9,8 @@ $main_col_width: 698px
 $side_col_width: 300px
 $font_weight: 800
 
+$project_image_width: 160px
+
 // colours
 $white: #FFF
 $black: #000
@@ -19,7 +21,7 @@ $accent_dark: #385455
 
 body
   font:
-    family: "Helvetica Neue",Helvetica Neue,Helvetica,Arial,Verdana,sans
+    family: "Helvetica Neue",Helvetica,Arial,Verdana,sans
   margin: 0
   padding: 0
   background-color: $white
@@ -84,33 +86,6 @@ body
     a:hover
       color: $accent
 
-#content
-  width: $main_col_width
-  padding: 10px 0 0 0
-  
-  h2
-    color: $white
-    background-color: $black
-    font-size: 2.2em
-    padding: 20px
-    margin: 26px 0 46px 0
-    font-weight: $font_weight
-  
-  h3
-    font-size: 1.6em
-  
-  p
-    margin: 20px
-  
-  .project_left, .project_right
-    background-color: #ddd
-    margin: 15px
-    
-  .project_left
-    
-  .project_right
-    text-align: right
-
 #sidebar
   width: $side_col_width
   float: right
@@ -143,11 +118,81 @@ body
           background-color: $accent
           color: $black
 
+#content
+  width: $main_col_width
+  padding: 10px 0 0 0
+  
+  h2
+    color: $white
+    background-color: $black
+    font-size: 2.2em
+    padding: 20px
+    margin: 26px 0 46px 0
+    font-weight: $font_weight
+  
+  h3
+    font-size: 1.6em
+  
+  p
+    margin: 20px
+
+  // Project area
+
+  .project
+    border-bottom: 6px solid $black
+    padding: 16px 16px 48px 16px
+    margin-bottom: 32px
+      
+    h3, h4, h5
+      padding: 0px
+      margin: 0px
+      
+    h3
+      float: left
+      font-size: 1.6em
+      
+    h4
+      float: right
+      font-size: 1.6em
+
+    h5
+      font-size: 1em
+
+    p
+      margin: 0 0 16px 0
+      padding: 0
+
+    a img
+      border: 7px solid $black
+      
+    a:hover img
+      border: 7px solid $accent
+
+  .spacer
+    height: 20px
+
+  .project_left 
+    .description
+      padding-left: $project_image_width + 26px
+      
+    img
+      float: left
+
+  .project_right 
+    text-align: right
+
+    .description
+      padding-right: $project_image_width + 26px
+    
+    img
+      float: right
+
+
 // Styles
 
   
 .clear
-  clear: booth
+  clear: both
   
 .right
   text-align: right

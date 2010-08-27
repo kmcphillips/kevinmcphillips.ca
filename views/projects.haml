@@ -1,7 +1,8 @@
 %h2 Projects
 
 - Project.all.each_with_index do |project, i|
-  - if i % 2 == 0
-    .project_left= render :partial => 'project', :object => project
-  - else
-    .project_right= render :partial => 'project', :object => project
+  .project
+    - if i % 2 == 0
+      .project_left= render :partial => 'project', :object => project
+    - else
+      .project_right= render :partial => 'project', :object => project
