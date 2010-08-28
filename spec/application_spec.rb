@@ -75,5 +75,17 @@ describe 'Application' do
         "under_score".titleize.should == "Under Score"
       end
     end
+    
+    describe "rot13" do
+      {'admin@kevinmcphillips.ca' => 'nqzva@xrivazpcuvyyvcf.pn', 
+       '1234567890' => '1234567890',
+       'AbCdEfGhIjKlMnOpQrStUvWxYz!@#$%^&*()_+' => 'NoPqRsTuVwXyZaBcDeFgHiJkLm!@#$%^&*()_+', 
+       'Pie is delicious!' => 'Cvr vf qryvpvbhf!'
+      }.each do |key, value|
+        it "should convert #{key}" do
+          key.rot13.should == value
+        end
+      end
+    end
   end
 end

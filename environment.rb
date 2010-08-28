@@ -44,14 +44,7 @@ end
 
 class String
   def rot13
-    split("").inject("") do |accu, char|
-      accu << if ("a".."z").to_a.to_s.index(char.downcase)
-        rot = ("a".."z").to_a[(("a".."z").to_a.to_s.index(char.downcase) + 13) % 26]
-        ("A".."Z").to_a.include?(char) ? rot.upcase : rot
-      else
-        char
-      end
-    end
+    tr("A-Ma-mN-Zn-z","N-Zn-zA-Ma-m")
   end
   
   def titleize
