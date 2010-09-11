@@ -8,7 +8,7 @@ set :keep_releases, 10
 ## Configure source control
 set :scm, "git"
 set :repository,  "git://github.com/kimos/kevinmcphillips.ca.git"
-set :branch, "padrino"
+set :branch, "master"
 set :deploy_via, :checkout
 set :git_shallow_clone, 1
 
