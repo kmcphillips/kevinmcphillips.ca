@@ -1,0 +1,8 @@
+%h2 Projects
+
+- Project.all.each_with_index do |project, i|
+  .project
+    - if i % 2 == 0
+      .project_left= partial 'project', :object => project
+    - else
+      .project_right= partial 'project', :object => project

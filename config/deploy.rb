@@ -8,7 +8,7 @@ set :keep_releases, 10
 ## Configure source control
 set :scm, "git"
 set :repository,  "git://github.com/kimos/kevinmcphillips.ca.git"
-set :branch, "master"
+set :branch, "padrino"
 set :deploy_via, :checkout
 set :git_shallow_clone, 1
 
@@ -36,7 +36,7 @@ task :symlink_shared_files do
   run "touch #{shared_path}/#{db_file}"
   
   [db_file].each do |file|
-    run "ln -s #{shared_path}/#{file} #{release_path}/#{file}"
+    run "ln -s #{shared_path}/#{file} #{release_path}/db/#{file}"
   end
 end
 
@@ -45,12 +45,3 @@ task :restart do
   run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
 end
 
-## imgrate the database
-task :migrate do
-  run("cd #{current_path} && /usr/bin/env rake db:migrate")
-end
-
-## seed the database
-task :seed do
-  run("cd #{current_path} && /usr/bin/env rake db:seed")
-end

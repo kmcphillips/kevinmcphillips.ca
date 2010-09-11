@@ -1,0 +1,35 @@
+.block
+  .secondary-navigation
+    %ul.wat-cf
+      %li.first.active=link_to pat(:list), url(:projects, :index)
+      %li=link_to pat(:new), url(:projects, :new)
+  .content
+    %h2.title
+      - link_to "/projects" do
+        Projects
+    .inner
+      %table.table
+        %tr
+          %th.first=mat(:project, :id)
+          %th=mat(:project, :name)
+          %th=mat(:project, :description)
+          %th=mat(:project, :url)
+          %th=mat(:project, :source_url)
+          %th=mat(:project, :img)
+          %th.last="&nbsp;"
+        -@projects.each do |project|
+          %tr
+            %td.first=project.id
+            %td=project.name
+            %td=project.description
+            %td=link_to project.url, project.url unless project.url.blank?
+            %td=link_to project.source_url, project.source_url unless project.source_url.blank?
+            %td=project.img
+            %td.last
+              =button_to pat(:edit), url(:projects, :edit, :id => project.id), :method => :get, :class => :button_to
+              ="|"
+              =button_to pat(:delete), url(:projects, :destroy, :id => project.id), :method => :delete, :class => :button_to
+      .actions-bar.wat-cf
+        .actions="&nbsp;"
+
+-content_for :sidebar, partial("base/sidebar")

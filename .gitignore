@@ -6,3 +6,4 @@ log/*.log
 .settings
 *.db
 tmp/*
+.sass-cache
