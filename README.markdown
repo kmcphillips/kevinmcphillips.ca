@@ -2,7 +2,7 @@
 
 ## What?
 
-This is my professional home page. Nothing fancy, but it has all the important stuff. It is writtin in Ruby Padrino/Sinatra, DataMapper, and haml.
+This is my professional home page. Nothing fancy, but it has all the important stuff. It is written in Ruby Padrino/Sinatra, DataMapper, and haml.
 
 [http://kevinmcphillips.ca](http://kevinmcphillips.ca)
 
@@ -18,7 +18,8 @@ If you're still curious just visit my site.
 
 Pretty straight forward:
 
-    sudo gem install padrino bundler addressable daemons extlib datamapper rmagick data_mapper data_objects dm-do-adapter do_sqlite3 dm-sqlite-adapter eventmachine rack-flash thin
+    sudo gem install padrino bundler haml addressable daemons extlib datamapper data_mapper data_objects dm-do-adapter do_sqlite3 dm-sqlite-adapter eventmachine rack rack-flash rack-test thin
+    padrino rake dm:setup
     padrino start
 
 
