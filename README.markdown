@@ -14,6 +14,14 @@ I am a professional developer, working mostly in Ruby, Rails, JavaScript and mis
 If you're still curious just visit my site.
 
 
+## How?
+
+Pretty straight forward:
+
+    sudo gem install padrino bundler addressable daemons extlib datamapper rmagick data_mapper data_objects dm-do-adapter do_sqlite3 dm-sqlite-adapter eventmachine rack-flash thin
+    padrino start
+
+
 ## Contact
 
 I'm easy to get in touch with. [github@kevinmcphillips.ca](mailto:github@kevinmcphillips.ca)
