@@ -19,11 +19,6 @@ class String
   end
   
   def titleize
-    gsub("_", " ").split(" ").map{|x| x.capitalize}.join(" ")
-  end
-  
-  def humanize
-    gsub("_", " ").capitalize
+    humanize.split(" ").map{|x| x.capitalize}.join(" ")
   end
 end
-

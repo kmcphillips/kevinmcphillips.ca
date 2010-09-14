@@ -48,20 +48,6 @@ describe 'Application' do
       end
     end
     
-    describe "humanize" do
-      it "should upcase only the first word" do
-        "pie is delicious".humanize.should == "Pie is delicious"
-      end  
-      
-      it "should just upcase the only word" do
-        "pie".humanize.should == "Pie"
-      end
-      
-      it "should get rid of underscores" do
-        "under_score".humanize.should == "Under score"
-      end
-    end
-    
     describe "titleize" do
       it "should upcase all words" do
         "pie is delicious".titleize.should == "Pie Is Delicious"

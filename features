@@ -1,7 +1,14 @@
 Layout and fill out my proper resume
 Throw some WC3 validations at it
-Add blog area (many features yet to be hashed out)
-Do proper migrations for adding tables
 Put some kind of cool me-image on the bio page
 Get pictures for projects area
-
+Update landing page and sidebar in admin area
+Get tests fixed that broke on migration
+Build blog area
+  Add table migration
+  Add admin area through padrino
+  Layout posts and possible elements in it
+  Add actions for permalink and archive
+  Check html posting and do nl2br
+  Add RSS feed, including projects in RSS (possibly as blog posts on update)
+  
