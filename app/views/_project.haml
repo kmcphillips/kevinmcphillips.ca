@@ -1,5 +1,5 @@
 %h3.name= project.name
-%h4.url= link_to(project.url)
+%h4.url= link_to(project.url, project.url)
 .clear.spacer
 
 = link_to(image_tag("http://placehold.it/160x160.png", :alt => project.name), project.url) if project.image_path  # project.image_path

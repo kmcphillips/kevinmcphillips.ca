@@ -28,6 +28,7 @@
       #sidebar
         #nav
           %ul
+            - # %li= link_to "# Blog", "/"
             - PAGES.each do |page|
               %li= link_to "# #{page.to_s.capitalize}", "/#{page}"
 
@@ -42,7 +43,7 @@
       - unless @skip_footer
         #footer
           %p
-            = rot13email(EMAIL, "Contact me")
+            = rot13email(EMAIL, "Email me")
             = " :: "
             &copy;
             = Time.now.year
