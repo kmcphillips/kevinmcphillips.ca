@@ -18,7 +18,8 @@ If you're still curious just visit my site.
 
 Pretty straight forward:
 
-    sudo gem install padrino bundler haml addressable daemons extlib datamapper data_mapper data_objects dm-do-adapter do_sqlite3 dm-sqlite-adapter eventmachine rack rack-flash rack-test thin
+    sudo gem install padrino bundler
+    bundle install
     padrino rake dm:setup
     padrino start
 

@@ -116,10 +116,18 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  addressable
+  daemons
   data_mapper
+  data_objects
+  dm-do-adapter
   dm-sqlite-adapter
+  do_sqlite3
+  eventmachine
+  extlib
   haml
   padrino (= 0.9.15)
+  rack
   rack-flash
   rack-test
   rake
