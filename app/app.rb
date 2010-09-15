@@ -29,6 +29,7 @@ class KevinmcphillipsCa < Padrino::Application
     haml :'404'
   end
 
+  ## Blog pages
   get '/' do
     redirect '/blog'
   end
@@ -38,6 +39,17 @@ class KevinmcphillipsCa < Padrino::Application
     haml :blog
   end
 
+  get '/blog/:permalink' do
+    @post = Post.first :permalink => params[:permalink]
+
+    if @post
+      partial 'post', :object => @post
+    else
+      haml '404'
+    end
+  end
+
+  ## All other sections are pretty simple
   PAGES.each do |page|
     get "/#{page}" do
       @projects = Project.all if page == :projects    

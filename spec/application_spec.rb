@@ -2,21 +2,10 @@ require "#{File.dirname(__FILE__)}/spec_helper"
 
 describe 'Application' do
 
-  def app
-    Sinatra::Application.new
-  end
-
   describe "action" do
     it 'should show the default index page' do
       get '/'
       last_response.should be_ok
-    end
-    
-    it "should test the css/sass" do
-      pending "I don't know how to stub this yet"
-      should_receive(:content_type).with('text/css', :charset => 'utf-8')
-      should_receive(:sass).with(:stylesheet)
-      get '/stylesheet.css'
     end
     
     PAGES.each do |page|

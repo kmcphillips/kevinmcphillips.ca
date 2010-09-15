@@ -12,6 +12,10 @@ class Post
   validates_presence_of :title, :body, :permalink, :created_at
   validates_uniqueness_of :permalink
 
+  def path
+    "/blog/#{permalink}"
+  end
+
   protected
 
   ## Most of this is taken right from http://github.com/kimos/acts_as_permalink

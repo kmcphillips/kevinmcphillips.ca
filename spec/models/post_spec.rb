@@ -1,8 +1,15 @@
 require File.expand_path(File.dirname(__FILE__) + '/../spec_helper.rb')
 
 describe "Post Model" do
-  it 'can be created' do
-    @post = Post.new
-    @post.should_not be_nil
+  describe 'path' do
+    it 'should know its path' do
+      Post.new(:permalink => "pie").path.should == "/blog/pie"
+    end
+  end
+
+  describe 'set_permalink' do
+    it 'should be tested' do
+      pending
+    end
   end
 end
