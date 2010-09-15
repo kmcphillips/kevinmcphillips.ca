@@ -9,7 +9,7 @@ This is my professional home page. Nothing fancy, but it has all the important s
 
 ## Who?
 
-I am a professional developer, working mostly in Ruby, Rails, JavaScript and misc. web development.
+I am a professional developer working mostly in Ruby, Rails, JavaScript and misc. web development.
 
 If you're still curious just visit my site.
 
@@ -31,9 +31,9 @@ I'm easy to get in touch with. [github@kevinmcphillips.ca](mailto:github@kevinmc
 
 ## History
 
-July 29/2010 -- Initial repo creation.
+Sept 11/2010 -- Merged the 'padrino' branch into master and migrated to the new framework.
 
 August 3/2010 -- Added branch 'design2' and overhaul CSS/layout.
 
-Sept 11/2010 -- Merged the 'padrino' branch into master and migrated to the new framework.
+July 29/2010 -- Initial repo creation.
 
