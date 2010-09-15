@@ -30,8 +30,12 @@ class KevinmcphillipsCa < Padrino::Application
   end
 
   get '/' do
-    @skip_footer = true
-    haml :index
+    redirect '/blog'
+  end
+
+  get '/blog' do
+    @posts = Blog.pager pager_params(:page => params[:page], :sort => [:id.desc]) 
+    haml :blog
   end
 
   PAGES.each do |page|

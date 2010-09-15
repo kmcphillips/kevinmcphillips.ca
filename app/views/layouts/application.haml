@@ -28,7 +28,7 @@
       #sidebar
         #nav
           %ul
-            - # %li= link_to "# Blog", "/"
+            %li= link_to "# Blog", "/"
             - PAGES.each do |page|
               %li= link_to "# #{page.to_s.capitalize}", "/#{page}"
 

@@ -19,6 +19,7 @@ puts "=> Located #{Padrino.bundle} Gemfile for #{Padrino.env}"
 PAGES = [:bio, :resume, :projects, :code]
 EMAIL = "admin@kevinmcphillips.ca"
 TITLE = "Kevin McPhillips"
+PAGER_PER_PAGE = 3
 
 # include the core extensions
 require File.join(File.dirname(__FILE__), "extensions")

@@ -1,4 +1,8 @@
 KevinmcphillipsCa.helpers do
+
+  def pager_params(opts={})
+    {:per_page => PAGER_PER_PAGE}.merge(opts)
+  end
  
   def rot13email(email, name=nil)
     obfuscated = email.clone

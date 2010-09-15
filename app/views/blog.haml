@@ -1,0 +1,6 @@
+- @posts.each |post|
+  %h2= post.title
+  %div= post.body
+
+= @posts.pager.to_html("/blog", :size => 8)
+

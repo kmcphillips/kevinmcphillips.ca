@@ -20,6 +20,8 @@ gem 'dm-do-adapter'
 gem 'do_sqlite3'
 gem 'dm-sqlite-adapter'
 gem 'dm-timestamps'
+gem 'dm-pager'
+
 
 # Test requirements
 gem 'rspec', :group => "test", :require => "spec"
