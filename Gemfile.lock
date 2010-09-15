@@ -122,6 +122,7 @@ DEPENDENCIES
   data_objects
   dm-do-adapter
   dm-sqlite-adapter
+  dm-timestamps
   do_sqlite3
   eventmachine
   extlib
