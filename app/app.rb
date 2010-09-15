@@ -35,8 +35,8 @@ class KevinmcphillipsCa < Padrino::Application
   end
 
   get '/blog' do
-    @posts = Blog.pager pager_params(:page => params[:page], :sort => [:id.desc]) 
-    haml :blog
+    @posts = Post.page pager_params(:page => params[:page], :order => [:id.desc]) 
+    haml :'blog'
   end
 
   get '/blog/:permalink' do
@@ -45,7 +45,7 @@ class KevinmcphillipsCa < Padrino::Application
     if @post
       partial 'post', :object => @post
     else
-      haml '404'
+      haml :'404'
     end
   end
 
