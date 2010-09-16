@@ -43,7 +43,7 @@ class KevinmcphillipsCa < Padrino::Application
     @post = Post.first :permalink => params[:permalink]
 
     if @post
-      partial 'post', :object => @post
+      haml :'_post', :locals => {:post => @post}
     else
       haml :'404'
     end

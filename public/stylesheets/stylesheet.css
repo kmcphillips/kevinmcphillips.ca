@@ -92,10 +92,19 @@ body {
     padding: 20px;
     margin: 26px 0 46px 0;
     font-weight: 800; }
+  #content h2 a {
+    color: white; }
+  #content h2 a:hover {
+    color: #145595;
+    text-decoration: none; }
   #content h3 {
     font-size: 1.6em; }
   #content p {
     margin: 20px; }
+  #content div.post h3 {
+    padding: 0px 24px; }
+  #content div.post div.body {
+    padding: 0 24px 4px 24px; }
   #content .bio_image {
     padding: 0 16px 22px 16px;
     text-align: center; }

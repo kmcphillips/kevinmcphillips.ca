@@ -7,3 +7,4 @@ log/*.log
 *.db
 tmp/*
 .sass-cache
+public/stylesheets/*.css
