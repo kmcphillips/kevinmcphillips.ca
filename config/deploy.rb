@@ -45,3 +45,15 @@ task :restart do
   run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
 end
 
+## install gems through bundler
+namespace :bundle do
+  task :install do
+    run "cd #{current_path} && bundle install"
+  end
+end
+
+## run the migrations
+task :migrate do
+  run "cd #{current_path} && padrino rake dm:migrate"
+end
+
