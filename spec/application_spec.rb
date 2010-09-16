@@ -3,9 +3,16 @@ require "#{File.dirname(__FILE__)}/spec_helper"
 describe 'Application' do
 
   describe "action" do
-    it 'should show the default index page' do
-      get '/'
-      last_response.should be_ok
+    describe 'blog' do
+      it 'should show the default index page' do
+        pending
+        get '/'
+        last_response.should be_ok
+      end
+
+      it 'should test all the blog actions' do
+        pending
+      end
     end
     
     PAGES.each do |page|
