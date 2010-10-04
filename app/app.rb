@@ -34,7 +34,7 @@ class KevinmcphillipsCa < Padrino::Application
     redirect '/blog'
   end
 
-  get '/blog' do
+  get '/blog', :provides => [:html, :rss, :atom] do
     @posts = Post.page pager_params(:page => params[:page], :order => [:id.desc]) 
     haml :'blog'
   end

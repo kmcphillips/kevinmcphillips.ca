@@ -15,6 +15,10 @@ class Post
   def path
     "/blog/#{permalink}"
   end
+  
+  def full_path
+    "http://kevinmcphillips.ca#{path}"
+  end
 
   protected
 
