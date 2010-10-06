@@ -10,5 +10,8 @@ KevinmcphillipsCa.helpers do
     "<script>document.write('<a href=\"mailto:' + '#{email.rot13}'.rot13() + '\">#{name || "' + '#{email.rot13}'.rot13() + '"}</a>');</script><noscript><a href=\"mailto:#{obfuscated}\">#{name || obfuscated}</a></noscript>"
   end
 
+  def nl2br(txt) 
+    txt.gsub("\n", '<br />')
+  end
 end
 

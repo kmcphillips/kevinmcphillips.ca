@@ -22,7 +22,7 @@ TITLE = "Kevin McPhillips"
 PAGER_PER_PAGE = 3
 
 # Date formats
-Time::DATE_FORMATS[:blog] = "%B %d %Y at %I:%M%p"
+Time::DATE_FORMATS[:blog] = "%B %d %Y at %I:%M %P"
 
 # include the core extensions
 require File.join(File.dirname(__FILE__), "extensions")
