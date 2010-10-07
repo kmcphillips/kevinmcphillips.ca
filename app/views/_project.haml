@@ -2,9 +2,9 @@
 %h4.url= link_to(project.url, project.url)
 .clear.spacer
 
-= link_to(image_tag("http://placehold.it/160x160.png", :alt => project.name), project.url) if project.image_path  # project.image_path
+= link_to(image_tag("http://placehold.it/160x160.png", :alt => project.name), project.url) unless project.image_path.blank?
 .description
-  %p= project.description
-  %h5.url= link_to("GOTO source code", project.source_url) if project.source_url
+  %p= nl2br project.description
+  %h5.url= link_to("GOTO source code", project.source_url) unless project.source_url.blank?
 
 .clear
