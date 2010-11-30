@@ -34,7 +34,7 @@ class KevinmcphillipsCa < Padrino::Application
     redirect '/blog'
   end
 
-  get '/blog', :provides => [:html, :rss, :atom] do
+  get '/blog' do
     @posts = Post.page pager_params(:page => params[:page], :order => [:id.desc]) 
     haml :'blog'
   end
@@ -47,6 +47,10 @@ class KevinmcphillipsCa < Padrino::Application
     else
       haml :'404'
     end
+  end
+
+  get "/blog.rss" do
+    builder :blog
   end
 
   ## All other sections are pretty simple
