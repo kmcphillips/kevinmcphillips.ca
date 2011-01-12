@@ -35,7 +35,7 @@ class KevinmcphillipsCa < Padrino::Application
   end
 
   get '/blog' do
-    @posts = Post.page pager_params(:page => params[:page], :order => [:id.desc]) 
+    @posts = Post.page pager_params(:page => params[:page], :order => [:created_at.desc]) 
     haml :'blog'
   end
 

@@ -3,8 +3,9 @@ Layout and fill out my proper resume
 Throw some WC3 validations at it
 Put some kind of cool me-image on the bio page
 Get pictures for projects area
+Put icons into the admin actions (edit/delete)
+
 Build blog area
   Layout posts and possible elements in it
   Add actions for archive
   Add RSS feed, including projects in RSS (possibly as blog posts on update)
-  Clean up admin area for blog
