@@ -89,6 +89,27 @@ body
 #sidebar
   width: $side_col_width
   float: right
+
+  ul.nav
+    background-color: $black
+    list-style: none
+    margin: 24px 0
+    padding: 18px
+
+    li
+      padding: 2px
+      display: block
+    
+      a
+        background-color: $black
+        color: $white
+        padding: 2px
+        margin: 2px
+          
+      a:hover
+        text-decoration: none
+        background-color: $accent
+        color: $black
   
   #nav
     color: $white
@@ -96,27 +117,44 @@ body
     margin: 20px
     padding: 0
     font-weight: $font_weight
-    
-    ul
-      background-color: $black
-      list-style: none
-      margin: 24px 0
-      padding: 18px
+  
+  #tweet
+    color: $white
+    font-size: 1.7em
+    margin: 20px
+    padding: 0
+    font-weight: $font_weight
+    background-color: $black
 
-      li
-        padding: 2px
-        display: block
+    ul
+      padding-bottom: 0
+      margin-bottom: 0
+
+    .tweet
+      font-size: 0.6em
       
-        a
-          background-color: $black
-          color: $white
+      .tweet_list
+        margin: 0
+        
+      
+      h2
+        padding: 12px
+
+      ul
+        background-color: $black
+        list-style: none
+        margin: 24px 0
+        padding: 18px
+
+        li
           padding: 2px
-          margin: 2px
-            
-        a:hover
-          text-decoration: none
-          background-color: $accent
-          color: $black
+          display: block
+          font-size: 1em
+        
+          .tweet_avatar
+            padding-right: 10px
+      
+
 
 #content
   width: $main_col_width

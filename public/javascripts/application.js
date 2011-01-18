@@ -4,3 +4,11 @@ String.prototype.rot13 = function(){
 	});
 };
 
+$(document).ready(function(){
+	$(".tweet").tweet({
+      username: "kmcphillips",
+      avatar_size: 32,
+      count: 1,
+      loading_text: "<p>Uh-oh, here comes a tweet...</p>"
+  });
+});
