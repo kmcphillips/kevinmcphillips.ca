@@ -9,6 +9,6 @@ $(document).ready(function(){
       username: "kmcphillips",
       avatar_size: 32,
       count: 1,
-      loading_text: "<p>Uh-oh, here comes a tweet...</p>"
+      loading_text: "Uh-oh, here comes a tweet...",
   });
 });
