@@ -185,6 +185,37 @@ body
   p
     margin: 20px
 
+  ul.pager
+    text-align: center
+    background-color: black
+    font-weight: bold
+    list-style: none
+    margin: 0
+    padding: 12px
+
+    li.active
+      a
+        background-color: $white
+        color: $black
+        
+      a:hover
+        background-color: $white
+        color: $black
+        
+    li
+      padding: 0
+      display: inline
+  
+      a
+        color: $white
+        padding: 6px
+        margin: 0 8px
+        
+      a:hover
+        text-decoration: none
+        background-color: $accent
+        color: $black
+
   // Blog area
   div.post
     padding-bottom: 60px

@@ -19,7 +19,7 @@ puts "=> Located #{Padrino.bundle} Gemfile for #{Padrino.env}"
 PAGES = [:bio, :resume, :projects, :code]
 EMAIL = "admin@kevinmcphillips.ca"
 TITLE = "Kevin McPhillips"
-PAGER_PER_PAGE = 3
+PAGER_PER_PAGE = 5
 
 # Date formats
 Time::DATE_FORMATS[:blog] = "%B %d %Y at %I:%M %P"
