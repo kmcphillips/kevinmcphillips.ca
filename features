@@ -6,6 +6,5 @@ Put icons into the admin actions (edit/delete)
 Build blog area
   Layout posts and possible elements in it
   Add actions for archive
-  Add RSS feed, including projects in RSS (possibly as blog posts on update)
   Fix the right float clear problem
 

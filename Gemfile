@@ -8,6 +8,7 @@ gem 'thin' # or mongrel
 gem 'padrino', "0.9.15"
 
 # Component requirements
+gem 'builder'
 gem 'haml'
 gem 'addressable'
 gem 'daemons'

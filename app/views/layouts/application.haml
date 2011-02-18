@@ -8,7 +8,7 @@
     - ['jquery.js', 'jquery.tweet.js', 'application.js'].each do |file|
       %script{:src => "/javascripts/#{file}", :type => 'text/javascript'}
 
-    = feed_tag(:rss, "/blog.rss", :title => "RSS")
+    = feed_tag(:rss, "/feed.rss", :title => "RSS")
     
     = yield_content :js
   
@@ -51,6 +51,9 @@
       - unless @skip_footer
         #footer
           %p
+            = link_to "RSS", "/feed.rss"
+            = link_to image_tag("/images/icons/rss.png", :alt => "RSS"), "/feed.rss"
+            = " :: "
             = rot13email(EMAIL, "Email me")
             = " :: "
             &copy;
