@@ -7,7 +7,7 @@
 
   .section
     %h4 Contact Information
-    %ul
+    %ul.nobullet
       %li Ruby on Rails web developer in Winnipeg, Manitoba, Canada
       %li= rot13email(EMAIL)
       %li= link_to "github.com/kimos", "http://github.com/kimos/"
@@ -94,7 +94,8 @@
         %h5 Freelance Web Developer
         Developing and maintaining websites for fun and for profit including:
         %br
-        - %w(gracehrabi.com ebritton.com stoneboatpottery.ca kevinmcphillips.ca).each do |site|
+        - %w(gracehrabi.com ebritton.com stoneboatpottery.ca kevinmcphillips.ca).each_with_index do |site, index|
+          = "&nbsp;/&nbsp" unless index == 0
           = link_to site, "http://#{site}"
         %br
         Currently porting legacy PHP sites to Rails 3.
