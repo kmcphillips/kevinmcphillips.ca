@@ -95,7 +95,7 @@ GEM
       mail (>= 2.2.0)
       padrino-core (= 0.9.15)
     polyglot (0.3.1)
-    rack (1.2.1)
+    rack (1.2.3)
     rack-flash (0.1.1)
       rack
     rack-test (0.5.4)
@@ -134,7 +134,7 @@ DEPENDENCIES
   extlib
   haml
   padrino (= 0.9.15)
-  rack
+  rack (= 1.2.3)
   rack-flash
   rack-test
   rake

@@ -7,3 +7,26 @@ Build blog area
   Layout posts and possible elements in it
   Add actions for archive
 
+Syntax hilighting for code http://alexgorbatchev.com/SyntaxHighlighter/manual/installation.html
+
+
+
+Upgrading:
+
+********************
+ UPGRADE NOTES
+
+ When upgrading, please 'enable :sessions' for each application as shown here: http://bit.ly/kODKMx
+ When upgrading, please 'register Padrino::Rendering' for each application as shown here: https://gist.github.com/1d36a35794dbbd664ea4
+********************
+
+Successfully installed http_router-0.8.11
+Successfully installed padrino-core-0.10.0
+Successfully installed padrino-helpers-0.10.0
+Successfully installed padrino-mailer-0.10.0
+Successfully installed padrino-gen-0.10.0
+Successfully installed padrino-cache-0.10.0
+Successfully installed padrino-admin-0.10.0
+Successfully installed padrino-0.10.0
+8 gems installed
+
