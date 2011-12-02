@@ -35,7 +35,7 @@ class KevinmcphillipsCa < Padrino::Application
   ## All other sections are pretty simple
   PAGES.each do |page|
     get "/#{page}" do
-      @projects = Project.all if page == :projects    
+      @projects = Project.all(:order => [:id.desc]) if page == :projects    
       @title = page.to_s.humanize
       haml page
     end
