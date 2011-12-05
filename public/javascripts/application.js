@@ -10,5 +10,6 @@ $(document).ready(function(){
       avatar_size: 32,
       count: 1,
       loading_text: "Uh-oh, here comes a tweet...",
+      filter: function(t){ return ! /^@\w+/.test(t.tweet_raw_text); }
   });
 });
