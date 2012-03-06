@@ -41,6 +41,8 @@ class Post
 
         self.permalink = self.permalink + num.to_s
       end
+
+      self.permalink
     end
   end
 end

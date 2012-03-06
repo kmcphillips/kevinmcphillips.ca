@@ -27,4 +27,4 @@ gem 'dm-pager'
 # Test requirements
 gem 'rspec', :group => "test", :require => "spec"
 gem 'rack-test', :group => "test", :require => "rack/test"
-
+gem 'rspec-core', :group => "test"
