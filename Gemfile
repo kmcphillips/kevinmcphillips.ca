@@ -6,6 +6,7 @@ gem 'rack', "1.2.3"
 gem 'rack-flash'
 gem 'thin' # or mongrel
 gem 'padrino', "0.9.15"
+gem 'capistrano'
 
 # Component requirements
 gem 'builder'
