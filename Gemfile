@@ -4,9 +4,7 @@ source :rubygems
 gem 'rake'
 gem 'rack', "1.2.3"
 gem 'rack-flash'
-gem 'thin' # or mongrel
 gem 'padrino', "0.9.15"
-gem 'capistrano'
 
 # Component requirements
 gem 'builder'
@@ -24,8 +22,11 @@ gem 'dm-sqlite-adapter'
 gem 'dm-timestamps'
 gem 'dm-pager'
 
-
-# Test requirements
-gem 'rspec', :group => "test", :require => "spec"
-gem 'rack-test', :group => "test", :require => "rack/test"
-gem 'rspec-core', :group => "test"
+# Don't need these in prod, duh..
+group :development, :test do
+	gem 'capistrano'
+	gem 'thin'
+	gem 'rspec', :require => "spec"
+	gem 'rack-test', :require => "rack/test"
+	gem 'rspec-core'
+end
