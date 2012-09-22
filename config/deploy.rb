@@ -1,9 +1,9 @@
 ## Deployment config for production
 set :application, "Kevin McPhillips"
-set :deploy_to, "/home/kevin/kevinmcphillips.ca"
+set :deploy_to, "/var/www/kevin/data/www/kevinmcphillips.ca"
 set :user, "kevin"
 set :use_sudo, false
-set :keep_releases, 10
+set :keep_releases, 5
 
 ## Configure source control
 set :scm, "git"
@@ -16,8 +16,8 @@ set :git_shallow_clone, 1
 default_run_options[:pty] = true
 
 ## Role for production
-role :web, "kevinmcphillips.ca"
-role :app, "kevinmcphillips.ca"
+role :web, "68.169.58.121"
+role :app, "68.169.58.121"
 
 ## Tasks for deploying to Apache Passenger
 namespace :deploy do
@@ -57,3 +57,4 @@ task :migrate do
   run "cd #{current_path} && padrino rake dm:migrate"
 end
 
+after "deploy:update", "deploy:cleanup"
