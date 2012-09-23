@@ -10,3 +10,4 @@ public/stylesheets/*.css
 .rvmrc
 *.sublime-workspace
 /notes
+/config/database.yml
