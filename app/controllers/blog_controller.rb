@@ -9,5 +9,15 @@ class BlogController < ApplicationController
     @post = Post.find_by_permalink! params[:id]
     @title = @post.title
   end
+
+  def feed
+    @posts = Post.sorted
+
+    respond_to do |wants|
+      wants.rss do
+        render layout: false
+      end
+    end
+  end
   
 end

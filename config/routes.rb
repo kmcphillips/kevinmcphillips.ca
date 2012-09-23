@@ -6,6 +6,7 @@ KevinmcphillipsCa::Application.routes.draw do
   root :to => "blog#index"
 
   resources :blog, only: [:index, :show]
+  match "feed.:format" => "blog#feed"
 
   match "bio" => "blocks#bio"
   match "code" => "blocks#code"

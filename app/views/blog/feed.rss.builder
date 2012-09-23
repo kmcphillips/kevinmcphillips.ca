@@ -9,9 +9,9 @@ xml.rss "version" => "2.0", "xmlns:dc" => "http://purl.org/dc/elements/1.1/" do
     for post in @posts
       xml.item do
         xml.title post.title
-        xml.description nl2br(post.body)
+        xml.description simple_format(post.body)
         xml.pubDate post.created_at.to_s(:rfc822)
-        xml.link post.full_path
+        xml.link blog_path(post)
       end
     end
   end
