@@ -1,32 +1,37 @@
-source :rubygems
+source 'https://rubygems.org'
 
-# Project requirements
-gem 'rake'
-gem 'rack', "1.2.3"
-gem 'rack-flash'
-gem 'padrino', "0.9.15"
+gem 'rails', '3.2.3'
 
-# Component requirements
-gem 'builder'
+gem 'mysql2'
+gem 'json'
+gem 'jquery-rails'
+gem 'capistrano'
 gem 'haml'
-gem 'addressable'
-gem 'daemons'
-gem 'extlib'
-gem 'eventmachine'
-gem 'dm-sqlite-adapter'
-gem 'data_mapper'
-gem 'data_objects'
-gem 'dm-do-adapter'
-gem 'do_sqlite3'
-gem 'dm-sqlite-adapter'
-gem 'dm-timestamps'
-gem 'dm-pager'
+gem 'sass'
+gem 'kaminari'
+gem 'activeadmin'
+gem 'acts_as_permalink'
 
-# Don't need these in prod, duh..
+group :assets do
+  gem 'sass-rails',   '~> 3.2.3'
+  gem 'coffee-rails', '~> 3.2.1'
+  gem 'therubyracer', :platform => :ruby
+  gem 'uglifier', '>= 1.0.3'
+end
+
 group :development, :test do
-	gem 'capistrano'
-	gem 'thin'
-	gem 'rspec', :require => "spec"
-	gem 'rack-test', :require => "rack/test"
-	gem 'rspec-core'
+  gem 'haml-rails'
+  gem 'awesome_print'
+  gem 'pry'
+  gem 'pry-rails'
+  gem 'thin'
+
+  gem 'rspec', '>= 2.0.0'
+  gem 'rspec-rails', '>= 2.0.0'
+  gem 'guard'
+  gem 'spork'
+  gem 'guard-spork'
+  gem 'guard-rspec'
+  gem 'rb-fsevent'
+  gem 'rb-inotify'
 end

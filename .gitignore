@@ -1,6 +1,5 @@
 log/*.log
 .DS_Store
-.idea
 .classpath
 .project
 .settings
@@ -9,4 +8,5 @@ tmp/*
 .sass-cache
 public/stylesheets/*.css
 .rvmrc
-kevinmcphillips.ca.sublime-workspace
+*.sublime-workspace
+/notes

@@ -1,0 +1,7 @@
+.post
+  %h2= link_to post.title, blog_path(post)
+  %h3= post.created_at.to_s :blog
+
+  .body= simple_format(post.body)
+  .clear_left
+
