@@ -11,7 +11,7 @@
       %li Ruby on Rails web developer and consultant in Winnipeg, Manitoba, Canada
       %li= rot13email(email)
       %li= link_to "github.com/kimos", "http://github.com/kimos/"
-  
+
   .section
     %h4 Technical
     %ul
@@ -20,42 +20,42 @@
         Love it and live it.
       %li
         %span.bold Frameworks:
-        Rails 2 and 3, Sinatra, Padrino
+        Extensive Rails. Other Ruby web frameworks in various forms.
       %li
         %span.bold Web:
-        jQuery/Javascript, CSS3        
+        jQuery/Javascript, CSS3, CoffeeScript
       %li
         %span.bold Testing:
-        RSpec, MiniTest
+        RSpec, Guard/Spork, FactoryGirl
       %li
         %span.bold Database:
-        MySQL, SQLite, ActiveRecord, DataMapper
+        MySQL, SQLite, ActiveRecord
       %li
         %span.bold OS:
         Linux enthusiast and full time user. Mac user.
       %li
         %span.bold Languages:
-        Java trained. Some PHP. A dash of Python and shell scripting.
+        Originally Java trained. Some PHP. A dash of Python and shell scripting.
       %li
-        %span.bold Tools:
-        Git, Bash, JSON, XML
+        %span.bold Tools of choice:
+        Git, Sublime Text, Fish Shell.
       %li
         %span.bold Methodologies:
-        Agile in variants on Scrum and Kanban
+        Agile in variants on Scrum and Kanban. Emphasis on TDD.
 
   .section
     %h4 Work
-    
+
     %ul.nobullet
       %li
         %h5 Western Life
         February 2012 - Present
         %br
-        Senior programmer/analyst
+        Senior Ruby programmer/analyst
         %br
-        Developing web applications using Ruby on Rails
+        Developing and maintaining internal web applications using Ruby on Rails
         %br
-        Administrate Linux servers
+        Splitting applications into a collection of manageable services.
 
       %li
         %h5 Online Business Systems
@@ -76,7 +76,7 @@
         Working closely with all departments on bug fixing and feature planning.
         %br
         Testing with RSpec.
-        
+
       %li
         %h5 MTS Communications Inc. (MTS TV)
         Java web developer for MTS TV
@@ -86,35 +86,35 @@
         Developed J2EE web applications as part of the MTS TV settop box portal.
         %br
         Worked in Java based web tech such as JSPs/Servlets, WebWork, and Hibernate.
-  
+
   .section
     %h4 Education
-    
+
     %ul.nobullet
       %li
         %h5 B. Sc. Computer Science (Co-op Option)
         2001-2006
         University of Manitoba
-      
+
       %li
         %h5 Sun Certified Java Programmer
         May 2009
         Java 5.0
-        
+
   .section
     %h4 Projects
-    
+
     %ul.nobullet
       %li
         %h5 Freelance Web Developer
         Developing and maintaining websites for fun and for profit including:
         %br
         - %w(gracehrabi.com cliftonstudios.ca stoneboatpottery.ca kevinmcphillips.ca).each_with_index do |site, index|
-          = "&nbsp;/&nbsp" unless index == 0
+          = "&nbsp;/&nbsp".html_safe unless index == 0
           = link_to site, "http://#{site}"
         %br
         Currently porting legacy PHP sites to Rails 3.
-        
+
       %li
         %h5 Ceramicist and Artist Co-op Member
         Dirtying my programmer hands doing wheel thrown pottery.
@@ -122,7 +122,7 @@
         President of the Clifton Studios Artist Co-Op.
         %br
         = link_to "cliftonstudios.ca/artists/kevin_mcphillips", "http://cliftonstudios.ca/artists/kevin_mcphillips"
-        
+
       %li
         %h5 Tinkerer
         Maintainer of a Linux server (VPS) and user of Ubuntu Linux and OS X desktops.
@@ -130,7 +130,7 @@
         Open source enthusiast.
         %br
         Interested in network security, hacking, and problem solving.
-        
+
   .section
     %h4 References
     %ul.nobullet

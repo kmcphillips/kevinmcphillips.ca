@@ -32,6 +32,14 @@ group :development, :test do
   gem 'spork'
   gem 'guard-spork'
   gem 'guard-rspec'
-  gem 'rb-fsevent'
-  gem 'rb-inotify'
+end
+
+group :darwin do
+  gem "rb-fsevent"
+  gem "growl_notify"
+end
+
+group :linux do
+  gem "rb-inotify"
+  gem "libnotify"
 end
