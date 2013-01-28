@@ -11,3 +11,4 @@ public/stylesheets/*.css
 *.sublime-workspace
 /notes
 /config/database.yml
+.bundle/config
