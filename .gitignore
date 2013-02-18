@@ -1,14 +1,9 @@
-log/*.log
 .DS_Store
-.classpath
 .project
 .settings
 *.db
 tmp/*
 .sass-cache
-public/stylesheets/*.css
 .rvmrc
 *.sublime-workspace
-/notes
-/config/database.yml
 .bundle/config
