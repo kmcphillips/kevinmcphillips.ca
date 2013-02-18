@@ -1,0 +1,81 @@
+$content_height: 280px;
+$content_width: 600px;
+
+$background: #0B486B;
+$header: #CFF09E;
+$copy: #A8DBA8;
+$link: #79BD9A;
+$link_visited: $link + #111;
+$link_hover: #3B8686;
+
+
+@font-face {
+    font-family: 'JuraBook';
+    src: url('/fonts/Jura-Regular-webfont.eot');
+    src: url('/fonts/Jura-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/Jura-Regular-webfont.woff') format('woff'),
+         url('/fonts/Jura-Regular-webfont.ttf') format('truetype'),
+         url('/fonts/Jura-Regular-webfont.svg#JuraBook') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+body {
+  background-color: $background;
+  color: $copy;
+
+  a {
+    color: $link;
+    text-decoration: none;
+  }
+
+  a:visited {
+    color: $link_visited;
+  }
+
+  a:hover {
+    color: $link_hover;
+    text-decoration: none;
+  }
+
+  h1, h2, h3 {
+    color: $header;
+    font-family: JuraBook, helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+  }
+
+  h1 {
+    font-size: 3.5em;
+  }
+
+  h2 {
+    font-size: 2em;
+  }
+
+  section#content {
+    width: $content_width;
+    height: $content_height;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: (($content_height / 2) * -1);
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: (($content_width / 2) * -1);
+  }
+
+  ul {
+    text-align: right;
+    list-style-type: none;
+
+    li {
+      font-family: "Lucida Console", Monaco, monospace;
+      font-size: 1.1em;
+    }
+  }
+
+}
