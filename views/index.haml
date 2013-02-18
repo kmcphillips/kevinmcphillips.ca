@@ -3,10 +3,25 @@
   %head
     %title Kevin McPhillips
 
+    %script{src: "/application.js"}
     %link{href: "/stylesheet.css", rel: "stylesheet", type: "text/css"}
-
   %header
+    %hgroup
+      %h1 Kevin McPhillips
+      %h2 Ruby Web Developer
 
   %body
-
-  %footer
+    %ul
+      %li
+        Employed at
+        %a{href: "http://shopify.com"} Shopify
+        in Winnipeg, Manitoba, Canada
+      %li= @email
+      %li
+        %a{href: "http://github.com/kmcphillips/"} kmcphillips
+        on GitHub
+      %li
+        %a{href: "http://twitter.com/kmcphillips"} @kmcphillips
+        on Twitter
+      %li
+        %a{href: "/kevinmcphillips_resume.pdf"} resume.pdf
