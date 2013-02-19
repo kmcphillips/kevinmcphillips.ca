@@ -17,3 +17,12 @@ role :app, "68.169.58.121"
 role :db,  "68.169.58.121", :primary => true
 
 after "deploy:update", "deploy:cleanup"
+
+namespace :deploy do
+  task :start do ; end
+  task :stop do ; end
+  task :restart, roles: :app, except: {no_release: true} do
+    run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
+  end
+end
+
