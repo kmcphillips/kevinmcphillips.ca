@@ -1,12 +1,14 @@
 require "bundler/capistrano"
+require "rvm/capistrano"
 
 set :application, "Kevin McPhillips"
 set :repository,  "git://github.com/kmcphillips/kevinmcphillips.ca.git"
-set :deploy_to, "/home/kevinmcphillips/kevinmcphillips.ca"
+set :deploy_to, "/home/kevin/kevinmcphillips.ca"
 set :user, "kevin"
 set :use_sudo, false
 set :scm, "git"
 set :keep_releases, 5
+
 
 default_run_options[:pty] = true
 
