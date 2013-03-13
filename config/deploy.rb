@@ -2,7 +2,7 @@ require "bundler/capistrano"
 
 set :application, "Kevin McPhillips"
 set :repository,  "git://github.com/kmcphillips/kevinmcphillips.ca.git"
-set :deploy_to, "/var/www/kevin/data/www/kevinmcphillips.ca"
+set :deploy_to, "/home/kevinmcphillips/kevinmcphillips.ca"
 set :user, "kevin"
 set :use_sudo, false
 set :scm, "git"
@@ -12,9 +12,9 @@ default_run_options[:pty] = true
 
 set :bundle_without, [:development, :test, :linux, :darwin]
 
-role :web, "68.169.58.121"
-role :app, "68.169.58.121"
-role :db,  "68.169.58.121", :primary => true
+role :web, "198.211.110.159"
+role :app, "198.211.110.159"
+role :db,  "198.211.110.159", :primary => true
 
 after "deploy:update", "deploy:cleanup"
 
