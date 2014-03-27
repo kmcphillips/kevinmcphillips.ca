@@ -1,14 +1,14 @@
 @import url(http://fonts.googleapis.com/css?family=Muli:300,400);
 
-$content_height: 280px;
+$content_height: 200px;
 $content_width: 600px;
 
-$background: #0B486B;
-$header: #CFF09E;
-$copy: #A8DBA8;
-$link: #79BD9A;
-$link_visited: $link + #111;
-$link_hover: #3B8686;
+$background: #29323B;
+$header: #F2F4F1;
+$copy: #7F8C9D;
+$link: $copy + #333;
+$link_hover: $copy;
+$link_visited: $link;
 $header_font: 'Muli', helvetica, sans-serif;
 $secondary_font: 'Muli', helvetica, sans-serif;
 
