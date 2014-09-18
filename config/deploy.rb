@@ -28,3 +28,8 @@ namespace :deploy do
   end
 end
 
+after "deploy:finalize_update", "symlink_shared_files"
+
+task :symlink_shared_files do
+  run "ln -s #{shared_path}/keybase.txt #{release_path}/public/keybase.txt"
+end

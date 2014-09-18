@@ -7,3 +7,4 @@ tmp/*
 .rvmrc
 *.sublime-workspace
 .bundle/config
+public/keybase.txt
