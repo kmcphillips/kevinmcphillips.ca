@@ -2,7 +2,7 @@ class KevinMcphillipsApp < Sinatra::Base
   set :haml, format: :html5
 
   get '/' do
-    @email = rot13email(["contact", "@", "kevinmcphillips.ca"].join(""))
+    @email = rot13email(["hello", "@", "kevinmcphillips.ca"].join(""))
     haml :index
   end
 
