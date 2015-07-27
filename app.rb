@@ -15,7 +15,7 @@ class KevinMcphillipsApp < Sinatra::Base
 
     def rot13email(email, name=nil)
       obfuscated = email.clone.insert((email.length / 3) * 2, "[REMOVETHIS]").insert(email.length / 3, "[REMOVETHIS]")
-      "<script>document.write('<a href=\"mailto:' + '#{ rot13(email) }'.rot13() + '\">#{name || "' + '#{ rot13(email) }'.rot13() + '"}</a>');</script><noscript><a href=\"mailto:#{obfuscated}\">#{name || obfuscated}</a></noscript>"
+      "<script>document.write('<a href=\"mailto:' + rot13('#{ rot13(email) }') + '\">#{name || "' + rot13('#{ rot13(email) }') + '"}</a>');</script><noscript><a href=\"mailto:#{obfuscated}\">#{name || obfuscated}</a></noscript>"
     end
 
     def rot13(string)
