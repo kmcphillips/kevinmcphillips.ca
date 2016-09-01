@@ -2,7 +2,6 @@ class KevinMcphillipsApp < Sinatra::Base
   set :haml, format: :html5
 
   get '/' do
-    @email = rot13email(["hello", "@", "kevinmcphillips.ca"].join(""))
     haml :index
   end
 
@@ -12,16 +11,17 @@ class KevinMcphillipsApp < Sinatra::Base
 
 
   helpers do
+    def my_email
+      ["hello", "@", "kevinmcphillips.ca"].join("")
+    end
 
-    def rot13email(email, name=nil)
+    def obfuscated_email(email, name:nil, link_class:"")
       obfuscated = email.clone.insert((email.length / 3) * 2, "[REMOVETHIS]").insert(email.length / 3, "[REMOVETHIS]")
-      "<script>document.write('<a href=\"mailto:' + rot13('#{ rot13(email) }') + '\">#{name || "' + rot13('#{ rot13(email) }') + '"}</a>');</script><noscript><a href=\"mailto:#{obfuscated}\">#{name || obfuscated}</a></noscript>"
+      "<script>document.write('<a href=\"mailto:' + rot13('#{ rot13(email) }') + '\" class=\"#{link_class}\">#{name || "' + rot13('#{ rot13(email) }') + '"}</a>');</script><noscript><a href=\"mailto:#{obfuscated}\">#{name || obfuscated}</a></noscript>"
     end
 
     def rot13(string)
       string.tr("A-Ma-mN-Zn-z","N-Zn-zA-Ma-m")
     end
-
   end
-
 end
