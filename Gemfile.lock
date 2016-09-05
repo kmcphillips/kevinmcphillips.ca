@@ -10,6 +10,7 @@ GEM
     haml (4.0.5)
       tilt
     highline (1.6.21)
+    json (2.0.2)
     net-scp (1.1.2)
       net-ssh (>= 2.6.5)
     net-sftp (2.1.2)
@@ -34,6 +35,10 @@ PLATFORMS
 
 DEPENDENCIES
   haml
+  json
   rvm-capistrano
   sass
   sinatra
+
+BUNDLED WITH
+   1.12.5

@@ -28,7 +28,7 @@
           <span>on( :<a class="red" href="https://github.com/kmcphillips">github</a> )</span>
           <span>on( :<a class="orange" href="https://twitter.com/kmcphillips">twitter</a> )</span>
           <span>on( :<a class="purple" href="https://instagram.com/kmcphillips">instagram</a> )</span>
-          <span>by( :<%= obfuscated_email(my_email, name: "email", link_class: "blue") %> ).at( "<%= obfuscated_email(my_email, link_class: "white") %>" )</span>
+          <span>by( :<%= obfuscated_email(text: "email", link_class: "blue") %> ).at( "<%= obfuscated_email(link_class: "white") %>" )</span>
           <span></span>
         </div>
       </div>

@@ -18,17 +18,15 @@ class KevinMcphillipsApp < Sinatra::Base
   end
 
   helpers do
-    def my_email
-      ["hello", "@", "kevinmcphillips.ca"].join("")
+    def obfuscated_email(text:nil, link_class:"")
+      obfuscated = "#{ email_parts.to_json }.reverse().join('@')"
+      "<script>
+        document.write('<a href=\"mailto:' + #{ obfuscated } + '\" class=\"#{ link_class }\">#{ text || ["' + ", obfuscated, " + '"].join }</a>');
+      </script>"
     end
 
-    def obfuscated_email(email, name:nil, link_class:"")
-      obfuscated = email.clone.insert((email.length / 3) * 2, "[REMOVETHIS]").insert(email.length / 3, "[REMOVETHIS]")
-      "<script>document.write('<a href=\"mailto:' + rot13('#{ rot13(email) }') + '\" class=\"#{link_class}\">#{name || "' + rot13('#{ rot13(email) }') + '"}</a>');</script><noscript><a href=\"mailto:#{obfuscated}\">#{name || obfuscated}</a></noscript>"
-    end
-
-    def rot13(string)
-      string.tr("A-Ma-mN-Zn-z","N-Zn-zA-Ma-m")
+    def email_parts
+      ["hello", "kevinmcphillips.ca"].reverse
     end
   end
 end
