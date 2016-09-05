@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Kevin McPhillips</title>
+  <meta name="description" content="Kevin McPhillips. Ruby developer and team lead at Shopify.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro:300,400" rel="stylesheet" type="text/css">
+  <script src="/application.js"></script>
+  <link rel="stylesheet" href="/beta_stylesheet.css">
+  <%= erb :analytics %>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="twelve columns">
+        <div class="content">
+          <span></span>
+          <span><h1>Kevin::McPhillips =</h1></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <div class="highlight-row">
+            <span class="highlight-num"><h2>"Ruby developer and team lead at #{ <a class="green" href="https://shopify.com/careers">Shopify</a> }."</h2></span>
+          </div>
+          <span></span>
+          <span></span>
+          <span>on( :<a class="red" href="https://github.com/kmcphillips">github</a> )</span>
+          <span>on( :<a class="orange" href="https://twitter.com/kmcphillips">twitter</a> )</span>
+          <span>on( :<a class="purple" href="https://instagram.com/kmcphillips">instagram</a> )</span>
+          <span>by( :<%= obfuscated_email(my_email, name: "email", link_class: "blue") %> ).at( "<%= obfuscated_email(my_email, link_class: "white") %>" )</span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

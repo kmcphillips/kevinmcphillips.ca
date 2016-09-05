@@ -9,6 +9,13 @@ class KevinMcphillipsApp < Sinatra::Base
     scss :stylesheet
   end
 
+  get '/beta' do
+    erb :beta
+  end
+
+  get '/beta_stylesheet.css' do
+    scss :beta_stylesheet
+  end
 
   helpers do
     def my_email
