@@ -16,6 +16,8 @@ namespace :deploy do
   end
 
   task :symlink_shared_files do
-    run "ln -s #{ shared_path }/keybase.txt #{ release_path }/public/keybase.txt"
+    on roles(:app) do
+      execute "ln -s #{ shared_path }/keybase.txt #{ release_path }/public/keybase.txt"
+    end
   end
 end
