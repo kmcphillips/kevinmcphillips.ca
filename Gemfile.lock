@@ -1,44 +1,62 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    capistrano (2.15.5)
-      highline
-      net-scp (>= 1.0.0)
-      net-sftp (>= 2.0.0)
-      net-ssh (>= 2.0.14)
-      net-ssh-gateway (>= 1.1.0)
-    haml (4.0.5)
+    airbrussh (1.1.1)
+      sshkit (>= 1.6.1, != 1.7.0)
+    capistrano (3.6.1)
+      airbrussh (>= 1.0.0)
+      capistrano-harrow
+      i18n
+      rake (>= 10.0.0)
+      sshkit (>= 1.9.0)
+    capistrano-bundler (1.2.0)
+      capistrano (~> 3.1)
+      sshkit (~> 1.2)
+    capistrano-harrow (0.5.3)
+    capistrano-rbenv (2.0.4)
+      capistrano (~> 3.1)
+      sshkit (~> 1.3)
+    capistrano3-unicorn (0.2.1)
+      capistrano (~> 3.1, >= 3.1.0)
+    haml (4.0.7)
       tilt
-    highline (1.6.21)
+    i18n (0.7.0)
     json (2.0.2)
-    net-scp (1.1.2)
+    kgio (2.10.0)
+    net-scp (1.2.1)
       net-ssh (>= 2.6.5)
-    net-sftp (2.1.2)
-      net-ssh (>= 2.6.5)
-    net-ssh (2.8.0)
-    net-ssh-gateway (1.2.0)
-      net-ssh (>= 2.6.5)
-    rack (1.5.2)
-    rack-protection (1.5.2)
+    net-ssh (3.2.0)
+    rack (1.6.5)
+    rack-protection (1.5.3)
       rack
-    rvm-capistrano (1.5.1)
-      capistrano (~> 2.15.4)
-    sass (3.3.4)
-    sinatra (1.4.4)
-      rack (~> 1.4)
+    raindrops (0.17.0)
+    rake (11.3.0)
+    sass (3.4.22)
+    sinatra (1.4.7)
+      rack (~> 1.5)
       rack-protection (~> 1.4)
-      tilt (~> 1.3, >= 1.3.4)
-    tilt (1.4.1)
+      tilt (>= 1.3, < 3)
+    sshkit (1.11.4)
+      net-scp (>= 1.1.2)
+      net-ssh (>= 2.8.0)
+    tilt (2.0.5)
+    unicorn (5.2.0)
+      kgio (~> 2.6)
+      raindrops (~> 0.7)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  capistrano (= 3.6.1)
+  capistrano-bundler
+  capistrano-rbenv
+  capistrano3-unicorn
   haml
   json
-  rvm-capistrano
   sass
   sinatra
+  unicorn
 
 BUNDLED WITH
-   1.12.5
+   1.13.6

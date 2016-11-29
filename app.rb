@@ -1,4 +1,7 @@
-class KevinMcphillipsApp < Sinatra::Base
+require "sinatra/base"
+require "json"
+
+class KevinMcphillipsApp < Sinatra::Application
   set :haml, format: :html5
 
   get '/' do
