@@ -8,3 +8,4 @@ tmp/*
 *.sublime-workspace
 .bundle/config
 public/keybase.txt
+/log/
