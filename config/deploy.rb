@@ -16,7 +16,7 @@ append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets'
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
 
 # Default value for keep_releases is 5
-set :keep_releases, 5
+set :keep_releases, 2
 
 # Unicorn
 # set :unicorn_pid, -> { File.join(current_path, "tmp", "pids", "unicorn.pid") }
