@@ -1,71 +1,89 @@
-@import url(http://fonts.googleapis.com/css?family=Muli:300,400);
+@import 'reset';
 
-$content_height: 200px;
-$content_width: 600px;
+$green: #84ea3a;
+$red: #ec5a60;
+$orange: #ef9c4c;
+$purple: #ce6df1;
+$blue: #36befa;
+$white: #ffffff;
+$grey-lighter: #aab3bf;
+$grey-light: #465061;
+$grey-dark: #2b323c;
+$grey-darker: #272c34;
+$line-counter-width: 2ch;
+$line-counter-spacing: 1ch;
+$line-indent: 2ch;
 
-$background: #29323B;
-$header: #F2F4F1;
-$copy: #7F8C9D;
-$link: $copy + #313131;
-$link_hover: $copy;
-$link_visited: $link;
-$header_font: 'Muli', helvetica, sans-serif;
-$secondary_font: 'Muli', helvetica, sans-serif;
-
-
-body {
-  background-color: $background;
-  color: $copy;
-
-  a {
-    color: $link;
-    text-decoration: none;
-  }
-
-  a:visited {
-    color: $link_visited;
-  }
-
-  a:hover {
-    color: $link_hover;
-    text-decoration: none;
-  }
-
-  h1, h2, h3 {
-    color: $header;
-    font-family: $header_font;
-    padding: 0;
-    margin: 0;
-  }
-
-  h1 {
-    font-size: 3.7em;
-  }
-
-  h2 {
-    font-size: 1.8em;
-  }
-
-  section#content {
-    width: $content_width;
-    height: $content_height;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    margin-top: (($content_height / 2) * -1);
-    margin-right: 0;
-    margin-bottom: 0;
-    margin-left: (($content_width / 2) * -1);
-  }
-
-  ul {
-    text-align: right;
-    list-style-type: none;
-
-    li {
-      font-family: $secondary_font;
-      font-size: 1.1em;
-    }
-  }
-
+html {
+  background-color: $grey-darker;
+  font-family: 'Source Code Pro', sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  height: 100%;
+  font-size: 16px;
+  font-weight: 300;
+  color: $grey-lighter;
 }
+
+a {
+  text-decoration: none;
+
+  &:active,
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.console {
+  counter-reset: line;
+  padding: 1em 0;
+}
+
+.console__line {
+  line-height: 1.5rem;
+  display: block;
+  text-indent: -($line-counter-width + $line-counter-spacing * 2);
+  padding-left: $line-counter-width + $line-counter-spacing * 2;
+  padding-right: 1em;
+
+  &:before {
+    padding: 0 $line-counter-spacing;
+    counter-increment: line;
+    content: counter(line);
+    -webkit-user-select: none;
+    text-align: right;
+    color: $grey-light;
+    min-width: $line-counter-width;
+    display: inline-block;
+  }
+}
+
+.console__line--highlighted {
+  background-color: $grey-dark;
+  text-indent: -($line-counter-width + $line-counter-spacing * 2 + $line-indent);
+  padding-left: $line-counter-width + $line-counter-spacing * 2 + $line-indent;
+
+  &:before {
+    padding-right: $line-counter-spacing + $line-indent
+  }
+}
+
+.green {
+  color: $green;
+}
+.red {
+  color: $red;
+}
+.orange {
+  color: $orange;
+}
+.purple {
+  color: $purple;
+}
+.blue {
+  color: $blue;
+}
+.white {
+  color: $white;
+}
+

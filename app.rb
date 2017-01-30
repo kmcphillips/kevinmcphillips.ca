@@ -2,22 +2,14 @@ require "sinatra/base"
 require "json"
 
 class KevinMcphillipsApp < Sinatra::Application
-  set :haml, format: :html5
+  set :erb, format: :html5
 
   get '/' do
-    haml :index
+    erb :index
   end
 
   get '/stylesheet.css' do
     scss :stylesheet
-  end
-
-  get '/beta' do
-    erb :beta
-  end
-
-  get '/beta_stylesheet.css' do
-    scss :beta_stylesheet
   end
 
   helpers do
