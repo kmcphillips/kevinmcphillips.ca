@@ -102,3 +102,21 @@ a {
 .console__text--white {
   color: $white;
 }
+
+/*============================================================================
+  Cursor
+==============================================================================*/
+
+.cursor {
+  display: inline-block;
+  vertical-align: sub;
+  animation: blink 1s infinite;
+  border-left: 1px solid $white;
+  height: $font-size;
+}
+
+@keyframes blink {
+  50% {
+    border-left: 1px solid transparent;
+  }
+}
