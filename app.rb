@@ -12,6 +12,10 @@ class KevinMcphillipsApp < Sinatra::Application
     scss :stylesheet
   end
 
+  get '/ping' do
+    'OK'
+  end
+
   helpers do
     def obfuscated_email(text:nil, link_class:"")
       obfuscated = "#{ email_parts.to_json }.reverse().join('@')"
