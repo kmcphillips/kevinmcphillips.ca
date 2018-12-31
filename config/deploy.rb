@@ -4,7 +4,7 @@ set :application, 'kevinmcphillips.ca'
 set :repo_url, 'https://github.com/kmcphillips/kevinmcphillips.ca.git'
 
 set :user, "deploy"
-set :rbenv_ruby, "2.5.3"
+set :rbenv_ruby, "2.6.0"
 
 # Default value for :linked_files is []
 # append :linked_files, 'config/database.yml', 'config/secrets.yml'
