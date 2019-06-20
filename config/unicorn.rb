@@ -3,10 +3,6 @@ project_dir = "/var/apps/kevinmcphillips.ca"
 current_dir = "#{ project_dir }/current"
 shared_dir = "#{ project_dir }/shared"
 
-before_exec do |server|
-  ENV["BUNDLE_GEMFILE"] = "#{ current_dir }/gems.rb"
-end
-
 working_directory current_dir
 
 # Set unicorn options
