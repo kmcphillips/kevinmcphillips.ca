@@ -12,6 +12,14 @@ class KevinMcphillipsApp < Sinatra::Application
     scss :stylesheet
   end
 
+  get /\/readme(.md|.html)?/i do
+    erb :readme
+  end
+
+  get '/readme.css' do
+    scss :readme
+  end
+
   get '/ping' do
     'OK'
   end
