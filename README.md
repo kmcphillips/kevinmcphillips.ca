@@ -15,3 +15,8 @@ bundle exec rackup
 Then open:
 
 [http://localhost:9292/](http://localhost:9292/)
+
+
+## Deploy
+
+Using [fly.io](https://fly.io/) `fly deploy`
