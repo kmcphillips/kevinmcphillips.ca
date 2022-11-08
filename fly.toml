@@ -5,18 +5,14 @@ kill_signal = "SIGINT"
 kill_timeout = 5
 processes = []
 
-[build]
-  builder = "heroku/buildpacks:20"
-
 [env]
-  PORT = "8080"
 
 [experimental]
   allowed_public_ports = []
   auto_rollback = true
 
 [[services]]
-  internal_port = 8080
+  internal_port = 8043
   processes = ["app"]
   protocol = "tcp"
   script_checks = []
@@ -29,7 +25,7 @@ processes = []
     grace_period = "5s"
     interval = 10000
     method = "get"
-    path = "/ping"
+    path = "/ping.html"
     protocol = "http"
     restart_limit = 0
     timeout = 2000
