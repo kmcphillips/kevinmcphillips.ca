@@ -1,0 +1,81 @@
+==================================================================
+https://keybase.io/kmcphillips
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://kevinmcphillips.ca
+  * I am kmcphillips (https://keybase.io/kmcphillips) on keybase.
+  * I have a public key with fingerprint FA50 A01E 100E F1A4 A66B  C09D 3B6E BB01 886B 72AC
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "010101aeffc857eab674720eebc9540cdbe745de8741096ac50d695f28016ae961490a",
+      "fingerprint": "fa50a01e100ef1a4a66bc09d3b6ebb01886b72ac",
+      "host": "keybase.io",
+      "key_id": "3b6ebb01886b72ac",
+      "kid": "010101aeffc857eab674720eebc9540cdbe745de8741096ac50d695f28016ae961490a",
+      "uid": "1c94f32b1cc6a8efad4103c744163300",
+      "username": "kmcphillips"
+    },
+    "merkle_root": {
+      "ctime": 1549922149,
+      "hash_meta": "fece16d978c62e12632cd604c87af8ea84608a8df1f6bd8dcb2b9ba83af4ff37",
+      "seqno": 4745826
+    },
+    "revoke": {
+      "sig_ids": [
+        "c5494091aba9e6a459bbb3f8cf30bf763c1767c99e3e8be0da7b78471b8a753a0f"
+      ]
+    },
+    "service": {
+      "hostname": "kevinmcphillips.ca",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1549922150,
+  "expire_in": 157680000,
+  "prev": "74547acbcf0be5effd722d3e57dbb28d7bd3136295631ba0f6081ee1c79131b1",
+  "seqno": 10,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.80
+Comment: https://keybase.io/crypto
+
+yMLEAnicrZNtiBVVGMfv9uLiJduXClrIwgnC8LKeMy/nnLmUS30JrhjIlsSqezsv
+z7l33Hvv3J2Zvbq77maZJGYQphkJUraCLa3J+qGoTFvXkJY2c8kiiogoKajwQ5H2
+YmeWRIg+NvNhmDP/5//8n9+cM73o2ky26fI3L/9x6lj3yaaZqccGMuv4z3rYEqEa
+tPLDVh/MP6CiIE6KfYGy8hbC6c1Ba8k8ClwQ6lIbAQjpey6SSgB1PQWMuhj5hEsP
+KeJ72mYIEw4+wa6PuJWzdFArQVSPglpibDX3EEcYMEKgMXc5IUIiXzmCgBAIM0YE
+tbk0heUwTitMOMFj6AxCs2ZeivPx/kP/P+cemLfD0ne1YwssJeEMNFemzJHUdTFx
+HIRSYQxRjVchzVqV9XJQqQT12BrJWVWI+ipQjMIwSfnKJEhV2HN937ZNHzMjj8vF
+KiQ8RQMSMFE+ZZLYgG3i2FIR5EpGuWbAmUsQ40xprIlQTElhC19w5nDtau1QEyWG
+/lpo5V0zIbOJSRBBI+yDtHkclAy52MqvtaQJ4CIfc8F9INz1fCGEo5nUDhKaEkdi
+Sqj0fXCACUCKU0GZS7FgnHoOR9paP5I2ixqBnDdPf9UVBNAIalcxdMqUZT0Kk1CG
+FfO9nCT1OJ/SSQbracFGEMV/rIoiqCmzXUxFA6I4CGuGllH+C5yHchZsqgcRFINU
+4VHCkLnSPtAwlmZ8l3IppEYCPLMVFLVt5YBHlRA2U1QoBzvE9j3iYGHmMWAxAJbU
+x2YBXyWJjWnCS8bT8KvxZCACa2TqxLrrMk3ZzILrr0nPUSa7sPXK6Ro91Hz5kbm1
+M6vbGku2PX54WVNhT0E+3fOG4M1V592O2Qe29Bw/We7++suVv1ToXZdu/7Cr65Yv
+to0umG6+ofumWwf3/oVqPbXzF8ZeFaPj0zf/sPHCqqG2/S1jrZnfH1y44ae2VZda
+D9179p5de297anlz16nnXvpxxZreR9uz537dU9k80fvx4cKu+0/f9/lXS1Z+kGVL
+Z7deLHXsm+z/c/v3k+faN70wN7Vldu5MaUfufPGzRUfeKQx3Fh4+tvuth9ac/mRH
+fmxi9dHflo4v++7O4zPjBxcPbR173tv59s7cgfb1r9/xZPa18OKZg737NrS8v/zu
+Fzff2BadmFz86Xsf7X52aP/EK8+cbXGsb9+ce6Jje7Z/xd+FlYmz
+=mwRZ
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/kmcphillips
+
+==================================================================
