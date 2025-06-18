@@ -1,6 +1,7 @@
 # fly.toml file generated for kmcphillips-kevinmcphillips-ca on 2022-11-07T16:06:41-05:00
 
 app = "kmcphillips-kevinmcphillips-ca"
+primary_region = "yyz"
 kill_signal = "SIGINT"
 kill_timeout = 5
 
